@@ -23,46 +23,51 @@ const Contact = () => {
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div className='lg:ml-28'>
                         <div>
-                            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                            <div class="card flex-shrink-0 w-96 shadow-2xl bg-base-100">
                                 <div class="card-body">
+
                                     <div class="form-control">
                                         <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={user} alt="" />
                                             <input className='pl-2 input-field' type="text" placeholder='Full Name' ></input>
                                         </div>
                                     </div>
+
                                     <div class="form-control">
                                     <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={email} alt="" />
                                             <input className='pl-2 input-field' type="text" placeholder='Email' ></input>
-                                        </div>
-                                        
+                                    </div> 
                                     </div>
+
                                     <div class="form-control">
                                     <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={phone} alt="" />
                                             <input className='pl-2 input-field' type="text" placeholder='Phone Number' ></input>
                                         </div>
                                     </div>
+
                                     <div class="form-control">
                                     <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={location} alt="" />
                                             <input className='pl-2 input-field' type="text" placeholder='City' ></input>
-                                        </div>
-                                        
                                     </div>
+                                    </div>
+
                                     <div class="form-control">
                                     <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={grade} alt="" />
                                             <input className='pl-2 input-field' type="text" placeholder='Course' ></input>
                                         </div>
                                     </div>
+                                    
                                     <div class="form-control">
                                         <div className='flex items-center justify-center mb-6 contact-input'>
                                             <img className='mx-4 for-opacity' src={message} alt="" />
-                                            <input className='pl-2 input-field' type="text" placeholder='Message' ></input>
+                                            <input style={{width:'200px'}} className='pl-2 input-field' type="text" placeholder='Message' ></input>
                                         </div>
                                     </div>
+
                                     <div class="form-control">
                                         <button class="for-background btn updated-font-family">Submit</button>
                                     </div>
