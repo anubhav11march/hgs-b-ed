@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Admission from './Components/Admission/Admission';
@@ -11,39 +11,45 @@ import Leadership from './Components/Leadership/Leadership';
 import ProgramesOffered from './Components/ProgramesOffered/ProgramesOffered';
 import ScrollToTop from './Components/ScrollToTop';
 import Navbar from './Navbar/Navbar';
+import Naac from './Components/Naac/Naac';
+
+
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [overView, setOverview] = useState('setOverview');
-  const [leadership, setLidership] = useState(''); 
-  const [programsOffered, setProgramsOffered] = useState(''); 
-  const [alumni, setAlumni] = useState(''); 
-  const [admission, setAdmission] = useState(''); 
-  const [facultiStaff, setFacultiStaff] = useState(''); 
+  const [leadership, setLidership] = useState('');
+  const [programsOffered, setProgramsOffered] = useState('');
+  const [alumni, setAlumni] = useState('');
+  const [admission, setAdmission] = useState('');
+  const [facultiStaff, setFacultiStaff] = useState('');
   const [contactUs, setContactUs] = useState('');
+  const [naac, setNaac] = useState('');
   const [quicklink, setQuickLink] = useState('');
-  console.log(showNavbar); 
+
+
   return (
     <div>
       <div className="">
-      <Navbar setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Navbar>
-      <ScrollToTop></ScrollToTop>
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+        <Navbar setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Navbar>
+        <ScrollToTop></ScrollToTop>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
 
-        <Route path='/contact' element={<Contact setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Contact>}></Route>
+          <Route path='/contact' element={<Contact setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Contact>}></Route>
 
-        <Route path='/faculty' element={<FacultyAndStaf setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></FacultyAndStaf>}></Route>
+          <Route path='/faculty' element={<FacultyAndStaf setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></FacultyAndStaf>}></Route>
+          <Route path='/naac' element={<Naac setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Naac>}></Route>
 
-        <Route path='/alumni' element={<Alumni setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Alumni>}></Route>
+          <Route path='/alumni' element={<Alumni setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Alumni>}></Route>
 
-        <Route path='/leadership' element={<Leadership setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Leadership>}></Route>
+          <Route path='/leadership' element={<Leadership setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Leadership>}></Route>
 
-        <Route path='/admission' element={<Admission setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Admission>}></Route>
+          <Route path='/admission' element={<Admission setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Admission>}></Route>
 
-        <Route path='/programesOffered' element={<ProgramesOffered setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></ProgramesOffered>} ></Route>
-      </Routes>
-    </div>
-    <Footer setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]}></Footer>
+          <Route path='/programesOffered' element={<ProgramesOffered setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></ProgramesOffered>} ></Route>
+        </Routes>
+      </div>
+      <Footer setShowNavbar={[showNavbar, setShowNavbar]} setOverview={[overView, setOverview]} setLidership={[leadership, setLidership]} setProgramsOffered={[programsOffered, setProgramsOffered]} setAlumni={[alumni, setAlumni]} setAdmission={[admission, setAdmission]} setFacultiStaff={[facultiStaff, setFacultiStaff]} setContactUs={[contactUs, setContactUs]} setNaac={[naac, setNaac]}></Footer>
     </div>
   );
 }

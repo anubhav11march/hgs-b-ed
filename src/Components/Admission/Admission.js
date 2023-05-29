@@ -7,7 +7,7 @@ import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 
-const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs }) => {
+const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
@@ -86,9 +86,21 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
+    const handleNaac = () => {
+        setOverview[1]('')
+        setLidership[1]('')
+        setProgramsOffered[1]('')
+        setAlumni[1]('')
+        setShowNavbar[1](true);
+        setAdmission[1]('')
+        setFacultiStaff[1]('')
+        setNaac[1]('setNaac[1]')
+        setContactUs[1]('')
+        navigate('/naac')
+    }
     return (
         <div>
-            <img  onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover-table:shadow-2xl' src={sosChildrenVillage} alt="" />
+            <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover-table:shadow-2xl' src={sosChildrenVillage} alt="" />
             <img className='w-full' src={aboutUs} alt="" />
             <div className='flex justify-center'>
                 <div className='mt-6 ml-10'>
@@ -96,9 +108,10 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
                         <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
                         <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
                         <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
-                        <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
+                        <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
                         <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
                         <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
+                        <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
                         <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                     </div>
 
@@ -198,33 +211,33 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
                                         B.Ed course.
                                     </p>
                                     <ul className='ml-10'>
-                                            <li className='flex items-center updated-font-family'>
-                                                <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
-                                                <p className='teacher-paragraph'>Candidates belonging to the General category should have secured at least 50% marks in their graduation
-                                            or post graduation examination. Candidates with even 49.99 percentile are not eligible to apply.</p>
-                                            </li>
+                                        <li className='flex items-center updated-font-family'>
+                                            <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
+                                            <p className='teacher-paragraph'>Candidates belonging to the General category should have secured at least 50% marks in their graduation
+                                                or post graduation examination. Candidates with even 49.99 percentile are not eligible to apply.</p>
+                                        </li>
 
 
-                                            <li className='flex items-center updated-font-family'>
-                                                <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
-                                                <p className='teacher-paragraph'>Candidates belonging to the reserved category (Other Backwards Class, Scheduled Caste and Scheduled
-                                            Tribe) should have scored at least 45% Marks in their graduation or post graduation examination.
-                                            Candidates with percentage of 44.99 are not eligible to apply.</p>
-                                            </li>
+                                        <li className='flex items-center updated-font-family'>
+                                            <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
+                                            <p className='teacher-paragraph'>Candidates belonging to the reserved category (Other Backwards Class, Scheduled Caste and Scheduled
+                                                Tribe) should have scored at least 45% Marks in their graduation or post graduation examination.
+                                                Candidates with percentage of 44.99 are not eligible to apply.</p>
+                                        </li>
 
 
-                                            <li className='flex items-center updated-font-family'>
-                                                <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
-                                                <p className='teacher-paragraph'>Candidate should not have any criminal record against them.</p>
-                                            </li>
+                                        <li className='flex items-center updated-font-family'>
+                                            <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
+                                            <p className='teacher-paragraph'>Candidate should not have any criminal record against them.</p>
+                                        </li>
 
 
-                                            <li className='flex items-center updated-font-family'>
-                                                <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
-                                                <p className='teacher-paragraph'>Candidates who have been debarred by the University for any reasons will not be eligible.</p>
-                                            </li>
+                                        <li className='flex items-center updated-font-family'>
+                                            <i style={{ color: '#2D4A9D' }} class="fa-solid fa-diamond text-2xl mr-3"></i>
+                                            <p className='teacher-paragraph'>Candidates who have been debarred by the University for any reasons will not be eligible.</p>
+                                        </li>
 
-                                        </ul>
+                                    </ul>
                                 </div>
 
 

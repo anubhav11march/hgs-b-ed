@@ -11,7 +11,7 @@ import Footer from '../Home/Footer';
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 import { useNavigate } from 'react-router-dom';
 
-const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs }) => {
+const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
@@ -90,6 +90,18 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
+    const handleNaac = () => {
+        setOverview[1]('')
+        setLidership[1]('')
+        setProgramsOffered[1]('')
+        setAlumni[1]('')
+        setShowNavbar[1](true);
+        setAdmission[1]('')
+        setFacultiStaff[1]('')
+        setNaac[1]('setNaac[1]')
+        setContactUs[1]('')
+        navigate('/naac')
+    }
     return (
         <div>
             <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
@@ -101,12 +113,12 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
                             <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
                             <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
                             <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
-                            <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
+                            <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
                             <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
                             <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
+                            <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
                             <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                         </div>
-
 
                         <div className='leadership-info'>
                             <div className='flex justify-center'>

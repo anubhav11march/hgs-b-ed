@@ -7,7 +7,7 @@ import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 
-const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs }) => {
+const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
@@ -86,6 +86,19 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
+    const handleNaac = () => {
+        setOverview[1]('')
+        setLidership[1]('')
+        setProgramsOffered[1]('')
+        setAlumni[1]('')
+        setShowNavbar[1](true);
+        setAdmission[1]('')
+        setFacultiStaff[1]('')
+        setNaac[1]('setNaac[1]')
+        setContactUs[1]('')
+        navigate('/naac')
+    }
+
     return (
         <div>
             <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
@@ -93,31 +106,32 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
             <div className='flex flex-col justify-between md:flex-row'>
                 <div className='flex justify-center mt-6 ml-6 md:grid lg:grid'>
                     <div>
-                    <div className='leadership'>
-                        <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
-                        <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
-                        <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
-                        <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
-                        <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
-                        <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
-                        <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
-                    </div>
+                        <div className='leadership'>
+                            <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
+                            <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
+                            <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
+                            <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
+                            <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
+                            <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
+                            <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
+                            <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
+                        </div>
 
 
-                    <div className='leadership-info'>
-                        <div className='flex justify-center'>
-                            <img className='h-8 mr-4' src={location} alt="" />
-                            <p className='flex forTexthover-table updated-font-family'>J N Kaul Institute of Education Bhimtal SOS Complex, Tallital Bhimtal Nainital, Uttrakhand, India, 263136</p>
+                        <div className='leadership-info'>
+                            <div className='flex justify-center'>
+                                <img className='h-8 mr-4' src={location} alt="" />
+                                <p className='flex forTexthover-table updated-font-family'>J N Kaul Institute of Education Bhimtal SOS Complex, Tallital Bhimtal Nainital, Uttrakhand, India, 263136</p>
+                            </div>
+                            <div className='flex items-center justify-center my-4 mr-6'>
+                                <img className='mr-4' src={email} alt="" />
+                                <p className='flex forTexthover-table updated-font-family'>Principal.bhimtalbed@sos<br />cvindia.org </p>
+                            </div>
+                            <div className='flex'>
+                                <img className='mr-4' src={phone} alt="" />
+                                <p className='flex forTexthover-table updated-font-family'>05942-247999</p>
+                            </div>
                         </div>
-                        <div className='flex items-center justify-center my-4 mr-6'>
-                            <img className='mr-4' src={email} alt="" />
-                            <p className='flex forTexthover-table updated-font-family'>Principal.bhimtalbed@sos<br />cvindia.org </p>
-                        </div>
-                        <div className='flex'>
-                            <img className='mr-4' src={phone} alt="" />
-                            <p className='flex forTexthover-table updated-font-family'>05942-247999</p>
-                        </div>
-                    </div>
                     </div>
                 </div>
 
@@ -135,275 +149,275 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
 
                         <div className='w-full gap-5'>
 
-                            
-                        <div class="overflow-x-auto">
-                        <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'> Semester-I</p>
-                                        <table class=" w-full">
-                                            <thead>
-                                                <tr className='hover-table hover-table-top-row'>
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
+                            <div class="overflow-x-auto">
+                                <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'> Semester-I</p>
+                                <table class=" w-full">
+                                    <thead>
+                                        <tr className='hover-table hover-table-top-row'>
+                                            <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family '>Internal Marks</th>
+                                            <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
+                                            <th className='text-xl normal-case table-data teacher-paragraph updated-font-family '>Internal Marks</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-101</th>
+                                            <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center '>Philosophical and sociological perspectives of Education</span></td>
+                                            <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className='hover-table'>
+                                            <th className='table-data teacher-paragraph updated-font-family'>B-101</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center '>30</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center '>Philosophical and sociological perspectives of Education</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center'>30</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center '>30</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center'>3</span></td>
-                                                </tr>
+                                            <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center'>30</span></td>
 
-
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-102</th>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Psychology of Development & Learning</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
-                                                </tr>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-103</th>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Principles and Methods of Teaching</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
-                                                </tr>
+                                            <td className='table-data teacher-paragraph updated-font-family '><span className='flex justify-center'>3</span></td>
+                                        </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>EPC-104</th>
+                                        <tr className='hover-table'>
+                                            <th className='table-data teacher-paragraph updated-font-family'>B-102</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Language Across the Curriculum</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Psychology of Development & Learning</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-                                                </tr>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>EPC-105</th>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
+                                        </tr>
+                                        <tr className='hover-table'>
+                                            <th className='table-data teacher-paragraph updated-font-family'>B-103</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Psychological Tests</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Principles and Methods of Teaching</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div>
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
+                                        </tr>
 
 
+                                        <tr className='hover-table'>
+                                            <th className='table-data teacher-paragraph updated-font-family'>EPC-104</th>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Language Across the Curriculum</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                        </tr>
+                                        <tr className='hover-table'>
+                                            <th className='table-data teacher-paragraph updated-font-family'>EPC-105</th>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Psychological Tests</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+
+                                            <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
 
 
-                                    <div className='mt-6 mb-6'>
-                                    <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'> Semester-II</p>
 
-                                    <div class="overflow-x-auto">
-                                        <table class=" w-full">
-                                            <thead>
-                                                <tr className='hover-table hover-table-top-row'>
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
+                            <div className='mt-6 mb-6'>
+                                <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'> Semester-II</p>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
+                                <div class="overflow-x-auto">
+                                    <table class=" w-full">
+                                        <thead>
+                                            <tr className='hover-table hover-table-top-row'>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-201</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Pedagogy of two School subjects</span></td>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30+30=60</span></td>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>B-201</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70+70=140</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Pedagogy of two School subjects</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><p></p>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30+30=60</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70+70=140</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><p></p>
                                                         <p>30</p></span>
-                                                        
-                                                    </td>
-                                                </tr>
+
+                                                </td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-202</th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>B-202</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>School Administration and Management</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>School Administration and Management</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'><span className='flex justify-center'>30</span></span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'><span className='flex justify-center'>30</span></span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
-                                                </tr>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-203</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
+                                            </tr>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>B-203</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Educational Technology and ICT</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Educational Technology and ICT</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>30</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>70</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
-                                                </tr>
-
-
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>EPC-204</th>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Technology Enabled Learning</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-                                                </tr>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>EPC-205</th>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Simulated, Micro and Supervised Teaching</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-                                                </tr>
-
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'></th>
-
-                                                    <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
-
-                                                    <th className='table-data teacher-paragraph updated-font-family'>170</th>
-
-                                                    <th className='table-data teacher-paragraph updated-font-family'>280</th>
-
-                                                    <th className='table-data teacher-paragraph updated-font-family'>450</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>3</span></td>
+                                            </tr>
 
 
-                                                </tr>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>EPC-204</th>
 
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Technology Enabled Learning</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                            </tr>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>EPC-205</th>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Simulated, Micro and Supervised Teaching</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                            </tr>
+
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'></th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>170</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>280</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>450</th>
+
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
                                 </div>
+                            </div>
 
 
-                                <div className='mb-6 '>
-                                    <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'>Semester-III</p>
+                            <div className='mb-6 '>
+                                <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'>Semester-III</p>
 
-                                    <div class="overflow-x-auto">
-                                        <table class=" w-full">
-                                            <thead>
-                                                <tr className='hover-table hover-table-top-row'>
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
+                                <div class="overflow-x-auto">
+                                    <table class=" w-full">
+                                        <thead>
+                                            <tr className='hover-table hover-table-top-row'>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        
-                                                        <p>B-301-A</p>
-                                                        <p>B-301-B</p>
-                                                    </th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><div><p>Pre-internship and School </p>
+                                                    <p>B-301-A</p>
+                                                    <p>B-301-B</p>
+                                                </th>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><div><p>Pre-internship and School </p>
                                                         <p>Observation</p>
                                                         <p>Internship</p></div></span>
-                                                    </td>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><div><p>25</p>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><div><p>25</p>
                                                         <p>75</p></div></span>
-                                                        
-                                                    </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><div><p>--</p>
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><div><p>--</p>
                                                         <p>250</p></div></span>
-                                                        
-                                                    </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><div><p>--</p>
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><div><p>--</p>
                                                         <p>--</p></div></span>
-                                                        
-                                                    </td>
-                                                </tr>
+
+                                                </td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>B-302-A</th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>B-302-A</th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Gender, School and Society</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Gender, School and Society</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>15</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>15</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>35</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>35</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>2</span></td>
-                                                </tr>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>2</span></td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        <p>B-302-B.1</p>
-                                                        <p>B-302-B.2
-                                                        </p>
-                                                        <p>B-302-B.3
-                                                        </p>
-                                                        <p>B-302-B.4
-                                                        </p>
-                                                    </th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
+                                                    <p>B-302-B.1</p>
+                                                    <p>B-302-B.2
+                                                    </p>
+                                                    <p>B-302-B.3
+                                                    </p>
+                                                    <p>B-302-B.4
+                                                    </p>
+                                                </th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'><div><p>(Any one out of following three)
-                                                        </p>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'><div><p>(Any one out of following three)
+                                                    </p>
                                                         <p>Teacher and Environmental Education
                                                         </p>
                                                         <p>Guidance and counseling
@@ -412,217 +426,217 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
                                                         </p>
                                                         <p>Basic Statistics
                                                         </p></div></span>
-                                                        
-                                                    </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>15</span></td>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>35</span></td>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>15</span></td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>2</span></td>
-                                                </tr>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>35</span></td>
 
-
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>EPC-303</th>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Community Work</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
-                                                </tr>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>2</span></td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'></th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>EPC-303</th>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>Community Work</span></td>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>155</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>25</span></td>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>320</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>475</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'><span className='flex justify-center'>--</span></td>
+                                            </tr>
 
-                                                </tr>
-                                            </tbody>
-                                        </table>
 
-                                    </div>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'></th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>155</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>320</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>475</th>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
                                 </div>
+                            </div>
 
 
-                                <div className='mb-6 '>
-                                    <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'>  Semester-IV</p>
+                            <div className='mb-6 '>
+                                <p className='flex justify-center mb-2 text-xl font-bold updated-font-family'>  Semester-IV</p>
 
-                                    <div class="overflow-x-auto">
-                                        <table class=" w-full">
-                                            <thead>
-                                                <tr className='hover-table hover-table-top-row'>
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
+                                <div class="overflow-x-auto">
+                                    <table class=" w-full">
+                                        <thead>
+                                            <tr className='hover-table hover-table-top-row'>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Course Code</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Name of the course</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Internal Marks</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>External Marks</th>
 
-                                                    <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                       
-                                                        B-401
-                                                    </th>
+                                                <th className='text-xl normal-case table-data teacher-paragraph updated-font-family'>Exam. Hours</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>Education in Contemporary Indian Society</span>
-                                                        
-                                                    </td>
+                                                    B-401
+                                                </th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>30</span>
-                                                        
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>Education in Contemporary Indian Society</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>70</span>
-                                                    </td>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>3</span>
-                                                        
-                                                    </td>
-                                                </tr>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>30</span>
 
+                                                </td>
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        B-402
-                                                    </th>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>70</span>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>School Curriculum Development</span>
-                                                        
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>3</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>30</span>
-                                                        
-                                                    </td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>70</span>
-                                                    </td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>3</span>
-                                                        
-                                                    </td>
-                                                </tr>
+                                                </td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        B-403
-                                                    </th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
+                                                    B-402
+                                                </th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>Measurement and Evaluation</span>
-                                                        
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>School Curriculum Development</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>30</span>
-                                                        
-                                                    </td>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>70</span>
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>30</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>3</span>
-                                                        
-                                                    </td>
-                                                </tr>
+                                                </td>
 
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>70</span>
+                                                </td>
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        B-404
-                                                    </th>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>3</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>Inclusion in School Education</span>
-                                                        
-                                                    </td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>30</span>
-                                                        
-                                                    </td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>70</span>
-                                                    </td>
-
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>3</span>
-                                                        
-                                                    </td>
-                                                </tr>
+                                                </td>
+                                            </tr>
 
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'>
-                                                        EPC-405
-                                                    </th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
+                                                    B-403
+                                                </th>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>Joyful Learning : Program Anandam</span>
-                                                        
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>Measurement and Evaluation</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>25</span>
-                                                        
-                                                    </td>
+                                                </td>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>--</span>
-                                                    </td>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>30</span>
 
-                                                    <td className='table-data teacher-paragraph updated-font-family'>
-                                                        <span className='flex justify-center'>--</span>
-                                                        
-                                                    </td>
-                                                </tr>
+                                                </td>
 
-                                                <tr className='hover-table'>
-                                                    <th className='table-data teacher-paragraph updated-font-family'></th>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>70</span>
+                                                </td>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>3</span>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>145</th>
+                                                </td>
+                                            </tr>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>280</th>
 
-                                                    <th className='table-data teacher-paragraph updated-font-family'>425</th>
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
+                                                    B-404
+                                                </th>
 
-                                                </tr>
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>Inclusion in School Education</span>
 
-                                            </tbody>
-                                        </table>
+                                                </td>
 
-                                    </div>
-                                </div> 
-                        
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>30</span>
+
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>70</span>
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>3</span>
+
+                                                </td>
+                                            </tr>
+
+
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'>
+                                                    EPC-405
+                                                </th>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>Joyful Learning : Program Anandam</span>
+
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>25</span>
+
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>--</span>
+                                                </td>
+
+                                                <td className='table-data teacher-paragraph updated-font-family'>
+                                                    <span className='flex justify-center'>--</span>
+
+                                                </td>
+                                            </tr>
+
+                                            <tr className='hover-table'>
+                                                <th className='table-data teacher-paragraph updated-font-family'></th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>TOTAL</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>145</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>280</th>
+
+                                                <th className='table-data teacher-paragraph updated-font-family'>425</th>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+
                         </div>
 
 

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useParams } from 'react-router-dom';
 
-const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs }) => {
+const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs,setNaac }) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
@@ -85,6 +85,18 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
+    const handleNaac = () => {
+        setOverview[1]('')
+        setLidership[1]('')
+        setProgramsOffered[1]('')
+        setAlumni[1]('')
+        setShowNavbar[1](true);
+        setAdmission[1]('')
+        setFacultiStaff[1]('')
+        setNaac[1]('setNaac[1]')
+        setContactUs[1]('')
+        navigate('/naac')
+    }
     return (
         <div>
             <footer class="footer p-10 Footer grid md:flex lg:flex justify-around text-base-content">
@@ -93,8 +105,6 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                     <Link class="link link-hover contact-info mb-[20px] lg:ml-20 md:ml-20" smooth to='/#home'>Overview</Link>
                     <Link class="link link-hover contact-info mb-[20px] lg:ml-20 md:ml-20" smooth to='/#infrastructure'>Infrastructure and Facilities</Link>
                     <Link class="link link-hover contact-info mb-[20px] lg:ml-20 md:ml-20" smooth to='/#photo'>Photo Gallery</Link>
-                    
-                    
                 </div>
 
                 <div className=''>
@@ -103,9 +113,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                     <a onClick={handleAlumni} class="link link-hover flex justify-center items-center mb-[20px] lg:ml-20 md:ml-20">
                         <p className='contact-info'>Alumni</p>
                     </a>
-
                     <a onClick={handleProgramsOffered} class="link link-hover contact-info mb-[20px] lg:ml-20 md:ml-20">Programs Offered</a>
-                    
                 </div>
 
                 {/* ml-2 md:ml-10 lg:ml-2 */}

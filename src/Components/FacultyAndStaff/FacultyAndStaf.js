@@ -24,7 +24,7 @@ import './FacultyStafTable.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Home/Footer';
 
-const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs }) => {
+const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
@@ -103,6 +103,18 @@ const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsO
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
+    const handleNaac = () => {
+        setOverview[1]('')
+        setLidership[1]('')
+        setProgramsOffered[1]('')
+        setAlumni[1]('')
+        setShowNavbar[1](true);
+        setAdmission[1]('')
+        setFacultiStaff[1]('')
+        setNaac[1]('setNaac[1]')
+        setContactUs[1]('')
+        navigate('/naac')
+    }
     return (
         <div className=''>
 
@@ -116,9 +128,10 @@ const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsO
                                 <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
                                 <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
                                 <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
-                                <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
+                                <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
                                 <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
                                 <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
+                                <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
                                 <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                             </div>
 
@@ -154,16 +167,16 @@ const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsO
                                             <th className='table-data'>Name</th>
                                             <th className='table-data'>Attested
                                                 photograph</th>
-                                            <th className='stand-heading table-data'>Category <br/>Whether SC/ST/OBC/other</th>
+                                            <th className='stand-heading table-data'>Category <br />Whether SC/ST/OBC/other</th>
                                             <th className='stand-heading table-data'>Designation</th>
-                                            <th className='stand-heading table-data'>of marks<br/> B.Ed with %</th>
-                                            <th className='stand-heading table-data'> of marks<br/>M.Ed with %</th>
-                                            <th className='stand-heading table-data'>of marks<br/>M.A (Education) with %</th>
-                                            <th className='stand-heading table-data'>subject with %<br/>Master's Degree in school</th>
+                                            <th className='stand-heading table-data'>of marks<br /> B.Ed with %</th>
+                                            <th className='stand-heading table-data'> of marks<br />M.Ed with %</th>
+                                            <th className='stand-heading table-data'>of marks<br />M.A (Education) with %</th>
+                                            <th className='stand-heading table-data'>subject with %<br />Master's Degree in school</th>
                                             <th className='stand-heading table-data'>Subject of Teaching</th>
-                                            <th className='stand-heading table-data'>the subject) <br/>Ph.D. (Education/Specify </th>
-                                            <th className='stand-heading table-data'> or equivalent <br/>Passed UGC NET</th>
-                                            <th className='stand-heading table-data'>in Years<br/>Teaching Experience</th>
+                                            <th className='stand-heading table-data'>the subject) <br />Ph.D. (Education/Specify </th>
+                                            <th className='stand-heading table-data'> or equivalent <br />Passed UGC NET</th>
+                                            <th className='stand-heading table-data'>in Years<br />Teaching Experience</th>
                                         </tr>
                                     </thead>
 
