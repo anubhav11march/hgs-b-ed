@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 import "./Naac.css"
-import aboutUs from './../assets/images/leadership.JPG'
+// import aboutUs from './../assets/images/leadership.JPG'
+import aboutUs from './../assets/images/Landing photo.jpg';
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 import location from './../assets/icons/location.png'
 import email from './../assets/icons/email.png'
