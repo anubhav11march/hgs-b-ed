@@ -27,23 +27,24 @@ const InstuteOfEducation = () => {
         <div>
             <div>
                 <div className='overflow-hidden'>
-                    <img className='w-full' src={background} alt="" />
-                    <img onClick={handleHome} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+                    <img className='w-full hidden lg:block' src={background} alt="" />
+                    <div className='mb-5 lg:mb-0'>
+                        <img onClick={handleHome} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+                    </div>
                     <div className='abs-class-large'>
                         <div class="hero kept-top">
                             <div class="hero-content flex-col lg:flex-row-reverse md:flex-row-reverse">
-                                <div className='mb-20 mr-8'>
+                                <div className='md:mb-16 lg:mb-20 mr-md-6 mr-lg-8'>
                                     <img className='hover-picture study-image-picture' src={studyImage} alt="" />
                                 </div>
 
-
-                                <div className='ml-[60px]'>
+                                <div className='ml-0 lg:ml-[60px]'>
                                     <div className='grid mb-24'>
                                         <div className=''>
                                             <h1 style={{ color: '#2D4A9D' }} className='instute font updated-font-family'>J.N. KAUL INSTITUTE OF EDUCATION</h1>
                                             <p style={{ color: '#2D4A9D' }} className='font bed-college updated-font-family'>B.ED. College, Bhimtal</p>
                                         </div>
-                                        <div className='mr-10'>
+                                        <div className='mr-0 lg:mr-10'>
                                             <em style={{ fontFamily: 'Cormorant' }} className='education-is-power'>The main hope of a nation lies in the proper education of its youth.</em>
                                         </div>
                                     </div>
@@ -71,7 +72,7 @@ const InstuteOfEducation = () => {
                         </div> */}
                     </div>
 
-                    <p className='pt-8 welcome moving-para'><span style={{ color: 'rgb(45, 74, 157)' }}> Upcoming: </span> BA. BSc. BEd. Integrated Courses</p>
+                    <p className='pt-0 lg:pt-8 welcome moving-para'><span style={{ color: 'rgb(45, 74, 157)' }}> Upcoming: </span> BA. BSc. BEd. Integrated Courses</p>
 
                     <AboutInstitution></AboutInstitution>
                     <InfrastructureCard></InfrastructureCard>

@@ -30,51 +30,51 @@ const PhotoGallery = () => {
         cssEase: "linear",
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     };
-    const sliderRef = useRef(null); 
-    const handleNext = () =>{
-        sliderRef.current.slickNext(); 
+    const sliderRef = useRef(null);
+    const handleNext = () => {
+        sliderRef.current.slickNext();
     }
-    const handlePrevious = () =>{
-        sliderRef.current.slickPrev(); 
+    const handlePrevious = () => {
+        sliderRef.current.slickPrev();
     }
     return (
-        <div className='mr-[30px] ml-[80px]' id='photo'>
+        <div className='photoGalleryContainer mr-0 lg:mr-[30px] ml-0  lg:ml-[80px]' id='photo'>
             <div className='slider-picture'>
                 <div className='flex justify-center my-8'>
-                <div>
-                    <h1 className='text-4xl welcome photoGallery-heading updated-font-family'>Photo Gallery</h1>
-                    <p className='w-[184px] welcome-line h-[4px]' alt="" />
-                    
+                    <div>
+                        <h1 className='text-4xl welcome photoGallery-heading updated-font-family'>Photo Gallery</h1>
+                        <p className='w-[184px] welcome-line h-[4px]' alt="" />
+
+                    </div>
                 </div>
-                </div>
-                <i onClick={handlePrevious} style={{color:'#2D4A9D'}} class="fa-solid text-5xl left-arrow-button fa-circle-chevron-left"></i>
-                
-                <i onClick={handleNext} style={{color:'#2D4A9D'}} class="fa-solid text-5xl right-arrow-button fa-circle-chevron-right"></i>
+                <i onClick={handlePrevious} style={{ color: '#2D4A9D' }} class="fa-solid text-5xl left-arrow-button fa-circle-chevron-left"></i>
+
+                <i onClick={handleNext} style={{ color: '#2D4A9D' }} class="fa-solid text-5xl right-arrow-button fa-circle-chevron-right"></i>
                 <Slider ref={sliderRef} {...settings}>
                     <div className='bg-white'>
                         <img className='gallery-photo' src={photo1} alt="" />

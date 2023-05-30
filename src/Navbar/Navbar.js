@@ -110,7 +110,7 @@ const Navbar = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
 
 
     return (
-        <div className={`flex justify-center lg:mx-[80px] md:mx-12 mx-6 ${(navbar === true) ? 'block' : 'hidden'} ${setShowNavbar[0] === true ? 'hidden' : 'block'} for-making-sticky-navbar`}>
+        <div className={`navbarContainer flex  justify-center lg:mx-[80px] md:mx-12 mx-6 ${(navbar === true) ? 'block' : 'hidden'} ${setShowNavbar[0] === true ? 'hidden' : 'block'} for-making-sticky-navbar`}>
             <div class="navbar shadow-2xl flex curve-navbar justify-around">
 
                 <div onClick={handleOverview} className={`items-center ${setOverview[0] ? 'for-background' : 'not-selected'} lg:px-4  py-4 navbar-topic`}>

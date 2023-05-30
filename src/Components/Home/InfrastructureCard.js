@@ -113,11 +113,11 @@ const InfrastructureCard = () => {
         }
     }
     return (
-        <div className='py-8 mt-16 middle-background' id='infrastructure'>
-            <div className='flex justify-center'>
+        <div className='lg:py-8 mt-0 lg:mt-16 middle-background' id='infrastructure'>
+            <div className='flex justify-center w-full'>
                 <div>
                     <h1 className='welcome infrustructure updated-font-family'>Infrastructure and Facilities</h1>
-                    <p className='w-[380px] welcome-line h-[4px]' alt="" />
+                    <p className='w-full lg:w-[380px] welcome-line h-[4px]' alt="" />
 
                 </div>
             </div>

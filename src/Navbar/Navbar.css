@@ -45,7 +45,7 @@
 }
 
 
-.for-background:hover{
+.for-background:hover {
     /* font-family: 'Poppins';
     font-weight: 600;
     font-size: 18px;
@@ -79,7 +79,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    
+
 }
 
 .navbar-button {
@@ -100,5 +100,11 @@
 .curve-navbar {
     background-color: aliceblue;
     border-radius: 10px;
-    color:#0076BD; 
+    color: #0076BD;
+}
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        display: none;
+    }
 }
