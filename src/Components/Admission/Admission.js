@@ -6,6 +6,7 @@ import location from './../assets/icons/location.png'
 import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
+import SideBar from '../SideBar/SideBar';
 
 const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
@@ -102,32 +103,37 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
         <div>
             <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover-table:shadow-2xl' src={sosChildrenVillage} alt="" />
             <img className='w-full' src={aboutUs} alt="" />
-            <div className='flex justify-center'>
-                <div className='mt-6 ml-10'>
-                    <div className='leadership'>
-                        <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
-                        <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
-                        <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
-                        <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
-                        <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
-                        <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
-                        <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
-                        <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
-                    </div>
+            <div className='flex flex-col justify-between md:flex-row'>
+                <div className=' flex lg:justify-center mt-6 ml-6 md:grid lg:grid'>
+                    <div>
+                        <div className='leadership'>
 
+                            <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
+                            <p onClick={handleLeadership} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Leadership</p>
+                            <p onClick={handleProgramsOffered} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Programs Offered</p>
+                            <p onClick={handleNaac} className='flex items-center h-12 my-2 forTextHover updated-font-family'>NAAC</p>
+                            <p onClick={handleAdmission} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Admission</p>
+                            <p onClick={handleFaculty} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Faculty & Staff</p>
+                            <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
+                            <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
+                        </div>
+                        <div>
+                            <SideBar />
+                        </div>
 
-                    <div className='leadership-info'>
-                        <div className='flex justify-center'>
-                            <img className='h-8 mr-4' src={location} alt="" />
-                            <p className='flex forTextHover updated-font-family'>J N Kaul Institute of Education Bhimtal SOS Complex, Tallital Bhimtal Nainital, Uttrakhand, India, 263136</p>
-                        </div>
-                        <div className='flex items-center justify-center my-4 mr-6'>
-                            <img className='mr-4' src={email} alt="" />
-                            <p className='flex forTextHover updated-font-family'>Principal.bhimtalbed@sos<br />cvindia.org </p>
-                        </div>
-                        <div className='flex'>
-                            <img className='mr-4' src={phone} alt="" />
-                            <p className='flex forTextHover updated-font-family'>05942-247999</p>
+                        <div className='leadership-info'>
+                            <div className='flex justify-center'>
+                                <img className='h-8 mr-4' src={location} alt="" />
+                                <p className='flex forTextHover updated-font-family'>J N Kaul Institute of Education Bhimtal SOS Complex, Tallital Bhimtal Nainital, Uttrakhand, India, 263136</p>
+                            </div>
+                            <div className='flex items-center justify-center my-4 mr-6'>
+                                <img className='mr-4' src={email} alt="" />
+                                <p className='flex forTextHover updated-font-family'>Principal.bhimtalbed@sos<br />cvindia.org </p>
+                            </div>
+                            <div className='flex'>
+                                <img className='mr-4' src={phone} alt="" />
+                                <p className='flex forTextHover updated-font-family'>05942-247999</p>
+                            </div>
                         </div>
                     </div>
                 </div>

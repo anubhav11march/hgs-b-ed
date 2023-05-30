@@ -9,6 +9,7 @@ import location from './../assets/icons/location.png'
 import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
+import SideBar from '../SideBar/SideBar';
 
 const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
@@ -119,6 +120,9 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                             <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                         </div>
 
+                        <div>
+                            <SideBar />
+                        </div>
 
                         <div className='leadership-info'>
                             <div className='flex justify-center'>

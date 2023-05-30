@@ -6,6 +6,7 @@ import location from './../assets/icons/location.png'
 import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
+import SideBar from '../SideBar/SideBar';
 
 const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
@@ -104,7 +105,7 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
             <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
             <img className='w-full' src={aboutUs} alt="" />
             <div className='flex flex-col justify-between md:flex-row'>
-                <div className='flex justify-center mt-6 ml-6 md:grid lg:grid'>
+                <div className='flex lg:justify-center mt-6 ml-6 md:grid lg:grid'>
                     <div>
                         <div className='leadership'>
                             <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
@@ -117,7 +118,9 @@ const ProgramesOffered = ({ setShowNavbar, setOverview, setLidership, setProgram
                             <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                         </div>
 
-
+                        <div>
+                            <SideBar />
+                        </div>
                         <div className='leadership-info'>
                             <div className='flex justify-center'>
                                 <img className='h-8 mr-4' src={location} alt="" />

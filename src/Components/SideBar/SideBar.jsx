@@ -23,7 +23,7 @@ function SideBar(props) {
                     setIsSideNav(!isSideNav);
                 }}
             >
-                <div className="color-white f-1-2">Bhopal</div>
+                <div className="color-white f-1-2">B.ED. College</div>
                 <div>
                     <BsChevronRight
                         color="white"
@@ -44,7 +44,7 @@ function SideBar(props) {
                             }}
                         >
                             <div
-                                className={`f-1 color-white f-400 mt-2 p-2 cursor sidebar_item ${pathname === `${"/" + item.navigation}` ? "selected" : null
+                                className={`f-1 color-white f-400 my-2 p-2 cursor sidebar_item ${pathname === `${"/" + item.navigation}` ? "selected" : null
                                     }`}
                             >
                                 {item.title}

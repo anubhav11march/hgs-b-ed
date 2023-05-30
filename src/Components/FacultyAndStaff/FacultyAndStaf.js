@@ -23,6 +23,7 @@ import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 import './FacultyStafTable.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Home/Footer';
+import SideBar from '../SideBar/SideBar';
 
 const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
@@ -134,7 +135,9 @@ const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsO
                                 <p onClick={handleAlumni} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Alumni</p>
                                 <p onClick={handleContact} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Contact Us</p>
                             </div>
-
+                            <div>
+                                <SideBar />
+                            </div>
 
                             <div className='leadership-info'>
                                 <div className='flex justify-center'>
