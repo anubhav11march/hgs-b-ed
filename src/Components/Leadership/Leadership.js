@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import aboutUs from './../assets/images/leadership.JPG'
 import teacher1 from './../assets/images/teacher-head (1).png'
 import teacher2 from './../assets/images/teacher-head (2).png'
@@ -11,15 +11,25 @@ import Footer from '../Home/Footer';
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 import { useNavigate } from 'react-router-dom';
 import SideBar from '../SideBar/SideBar';
+import NavbarMenu from '../NavbarMenu/NavbarMenu';
+import { BsList } from "react-icons/bs";
 
 const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isShow, steIsShow] = useState(false);
+    const handleClick = () => {
+        steIsShow(!isShow);
+        console.log(isShow);
+    };
+
     const handleOverView = () => {
         setOverview[1]('setOverview')
         setLidership[1]('')
         setProgramsOffered[1]('')
         setAlumni[1]('')
         setAdmission[1]('')
+        setNaac[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('')
         setShowNavbar[1](false);
@@ -32,6 +42,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setProgramsOffered[1]('')
         setAlumni[1]('')
         setAdmission[1]('')
+        setNaac[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('')
         navigate('/leadership')
@@ -42,6 +53,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setProgramsOffered[1]('setProgramsOffered')
         setAlumni[1]('')
         setAdmission[1]('')
+        setNaac[1]('')
         setFacultiStaff[1]('')
         setShowNavbar[1](true);
         setContactUs[1]('')
@@ -54,6 +66,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setAlumni[1]('setAlumni')
         setAdmission[1]('')
         setFacultiStaff[1]('')
+        setNaac[1]('')
         setShowNavbar[1](true);
         setContactUs[1]('')
         navigate('/alumni')
@@ -66,6 +79,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setAdmission[1]('setAdmission[1]')
         setShowNavbar[1](true);
         setFacultiStaff[1]('')
+        setNaac[1]('')
         setContactUs[1]('')
         navigate('/admission')
     }
@@ -79,6 +93,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setFacultiStaff[1]('setFacultiStaff[1]')
         setContactUs[1]('')
         navigate('/faculty')
+        setNaac[1]('')
     }
     const handleContact = () => {
         setOverview[1]('')
@@ -88,6 +103,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setShowNavbar[1](false);
         setAdmission[1]('')
         setFacultiStaff[1]('')
+        setNaac[1]('')
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
@@ -103,9 +119,39 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
         setContactUs[1]('')
         navigate('/naac')
     }
+
+    const handleScroll = () => {
+        if (window.scrollY > 0 && !isScrolled) {
+            setIsScrolled(true);
+        }
+        if (window.scrollY === 0) {
+            setIsScrolled(false);
+        }
+    };
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div>
-            <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+            <div className={`${isScrolled && "navbarMobile"}`}>
+                <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+                <div className="menuIconContainer">
+                    <div className="menuIcon">
+                        <BsList
+                            className="cursor"
+                            size={25}
+                            color="white"
+                            onClick={() => handleClick()}
+                        />
+                    </div>
+                </div>
+            </div>
             <img className='w-full' src={aboutUs} alt="" />
             <div className='flex flex-col justify-between md:flex-row'>
                 <div className='flex lg:justify-center mt-6 ml-6 md:grid lg:grid'>
@@ -123,7 +169,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
                         <div>
                             <SideBar />
                         </div>
-
+                        <NavbarMenu isShow={isShow} handleClick={handleClick} />
                         <div className='leadership-info'>
                             <div className='flex justify-center'>
                                 <img className='h-8 mr-4' src={location} alt="" />

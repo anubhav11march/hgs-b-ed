@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import aboutUs from './../assets/images/ALUMNI.JPG'
 import teacher1 from './../assets/images/alumni-teacher (1).png'
@@ -10,9 +10,17 @@ import email from './../assets/icons/email.png'
 import phone from './../assets/icons/footer.png'
 import sosChildrenVillage from './../assets/images/sos_logo 3.png';
 import SideBar from '../SideBar/SideBar';
+import { BsList } from "react-icons/bs";
+import NavbarMenu from '../NavbarMenu/NavbarMenu';
 
 const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
+    const [isShow, steIsShow] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const handleClick = () => {
+        steIsShow(!isShow);
+        console.log(isShow);
+    };
     const handleOverView = () => {
         setOverview[1]('setOverview')
         setLidership[1]('')
@@ -21,6 +29,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAdmission[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('')
+        setNaac[1]('')
         setShowNavbar[1](false);
         navigate('/')
     }
@@ -33,6 +42,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAdmission[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('')
+        setNaac[1]('')
         navigate('/leadership')
     }
     const handleProgramsOffered = () => {
@@ -44,6 +54,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setFacultiStaff[1]('')
         setShowNavbar[1](true);
         setContactUs[1]('')
+        setNaac[1]('')
         navigate('/programesOffered')
     }
     const handleAlumni = () => {
@@ -55,6 +66,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setFacultiStaff[1]('')
         setShowNavbar[1](true);
         setContactUs[1]('')
+        setNaac[1]('')
         navigate('/alumni')
     }
     const handleAdmission = () => {
@@ -66,6 +78,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setShowNavbar[1](true);
         setFacultiStaff[1]('')
         setContactUs[1]('')
+        setNaac[1]('')
         navigate('/admission')
     }
     const handleFaculty = () => {
@@ -77,6 +90,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAdmission[1]('')
         setFacultiStaff[1]('setFacultiStaff[1]')
         setContactUs[1]('')
+        setNaac[1]('')
         navigate('/faculty')
     }
     const handleContact = () => {
@@ -87,6 +101,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setShowNavbar[1](false);
         setAdmission[1]('')
         setFacultiStaff[1]('')
+        setNaac[1]('')
         setContactUs[1]('setContactUs[1]')
         navigate('/contact')
     }
@@ -102,9 +117,37 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setContactUs[1]('')
         navigate('/naac')
     }
+    const handleScroll = () => {
+        if (window.scrollY > 0 && !isScrolled) {
+            setIsScrolled(true);
+        }
+        if (window.scrollY === 0) {
+            setIsScrolled(false);
+        }
+    };
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <div>
-            <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+            <div className={`${isScrolled && "navbarMobile"}`}>
+                <img onClick={handleOverView} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
+                <div className="menuIconContainer">
+                    <div className="menuIcon">
+                        <BsList
+                            className="cursor"
+                            size={25}
+                            color="white"
+                            onClick={() => handleClick()}
+                        />
+                    </div>
+                </div>
+            </div>
             <img className='w-full' src={aboutUs} alt="" />
             <div className='flex flex-col justify-between md:flex-row'>
                 <div className='flex justify-center mt-6 ml-6 md:grid lg:grid'>
@@ -123,6 +166,8 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                         <div>
                             <SideBar />
                         </div>
+                        {/* responsive navbar */}
+                        <NavbarMenu isShow={isShow} handleClick={handleClick} />
 
                         <div className='leadership-info'>
                             <div className='flex justify-center'>
