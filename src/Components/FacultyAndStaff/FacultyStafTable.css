@@ -1,21 +1,29 @@
-table{
+table {
     border-collapse: collapse;
 }
 
-.table-data{
+.table-data {
     border: 2px solid black;
 }
-.stand-heading{
+
+.stand-heading {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
 
-.heading-height{
+.heading-height {
     /* height: 300px; */
 }
 
-.underline{
+.underline {
     text-decoration-line: underline;
     color: rgba(255, 68, 0, 0.912);
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .stand-heading {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
 }

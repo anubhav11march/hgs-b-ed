@@ -55,8 +55,8 @@ const InstuteOfEducation = () => {
     return (
 
         <div className='overflow-hidden relative' onScroll={handleScroll}>
-            <img className='w-full hidden lg:block' src={background} alt="" />
-            <div className={`mb-5 lg:mb-0 ${isScrolled && "navbarMobile"}`}>
+            <img className='w-full' src={background} alt="" />
+            <div className={`mb-0 ${isScrolled && "navbarMobile"}`}>
                 <img onClick={handleHome} className='w-20 lg:w-48 md:24 home-button hover:shadow-2xl' src={sosChildrenVillage} alt="" />
                 <div className="menuIconContainer">
                     <div className="menuIcon">
@@ -109,8 +109,10 @@ const InstuteOfEducation = () => {
                             </div>
                         </div> */}
             </div>
-
-            <p className='pt-0 lg:pt-8 welcome moving-para'><span style={{ color: 'rgb(45, 74, 157)' }}> Upcoming: </span> BA. BSc. BEd. Integrated Courses</p>
+            <div className='flex justify-center my-5'>
+                <button onClick={() => window.open("https://ukadmission.samarth.ac.in/", "_blank")} className='applyBtn'>Apply Now</button>
+            </div>
+            <p className='pt-0 lg:pt-8 welcome moving-para'><span style={{ color: 'rgb(45, 74, 157)' }}> Courses Offered: </span> B.A., B.Sc, and B.Ed.</p>
 
             <AboutInstitution></AboutInstitution>
             <InfrastructureCard></InfrastructureCard>

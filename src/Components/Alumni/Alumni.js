@@ -150,7 +150,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
             </div>
             <img className='w-full' src={aboutUs} alt="" />
             <div className='flex flex-col justify-between md:flex-row'>
-                <div className='flex justify-center mt-6 ml-6 md:grid lg:grid'>
+                <div className='flex lg:justify-center mt-6 ml-6 md:grid lg:grid'>
                     <div>
                         <div className='leadership'>
                             <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>
@@ -190,8 +190,8 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                     <div class=" mt-6 mb-[50px] ml-6 mr-6">
                         <h1 className='mt-2 mb-8 text-4xl leadership-heading updated-font-family'>Alumni</h1>
                         <div class="flex justify-center flexProp flex-col lg:flex-row">
-                            <img src={teacher1} class="teachers-picture  picture-shadow" alt='' />
-                            <div className='ml-6'>
+                            <img src={teacher1} class="teachers-picture  picture-shadow mb-3 lg:mb-0" alt='' />
+                            <div className='ml-0 lg:ml-6'>
                                 <h1 className='mb-2 text-2xl font-bold updated-font-family'>Shraddha Singh (Batch -2017-19)</h1>
                                 <p className='mb-2 text-xl updated-font-family'>Teacher</p>
                                 <p className='mb-2 text-xl updated-font-family'>Jawahar Navoday Vidyalaya,Pota (Rajasthan)</p>
@@ -205,7 +205,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
 
                     {/* 2nd one */}
                     <div class=" mt-2 mb-[50px] ml-6 mr-6">
-                        <div class="flex justify-center flexProp flex-col lg:flex-row">
+                        <div class="flex justify-center flexProp flex-col-reverse lg:flex-row">
                             <div className=''>
                                 <h1 className='mb-2 text-2xl font-bold updated-font-family'>Pooja Kuriya (Batch -2017-19)</h1>
                                 <p className='mb-2 text-xl updated-font-family'>Principal</p>
@@ -214,7 +214,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                                     I’m amongst the many students of the institution whose life changed not only academically but also mentally and emotionally after joining the Institute. The college focuses not only on making the finest of all teachers but also good humans and citizens. It’s the continuous toiling of the Principal and staff of the college that it has become one of the best and most revered colleges of education in the state. What I’m today, I totally owe to the hard work and values instilled by the institute in me, I m working as Lecturer English, Uttarakhand Education Department.
                                 </p>
                             </div>
-                            <img src={teacher2} class="teachers-picture  picture-shadow" alt='' />
+                            <img src={teacher2} class="mb-3 lg:mb-0 teachers-picture  picture-shadow" alt='' />
                         </div>
 
                     </div>
@@ -223,8 +223,8 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                     {/* 3rd */}
                     <div class=" mt-2 mb-[50px] ml-6 mr-6">
                         <div class="flex justify-center flexProp flex-col lg:flex-row">
-                            <img src={teacher3} class="teachers-picture  picture-shadow" alt='' />
-                            <div className='ml-6'>
+                            <img src={teacher3} class="mb-3 lg:mb-0 teachers-picture  picture-shadow" alt='' />
+                            <div className='ml-0 lg:ml-6'>
                                 <h1 className='mb-2 text-2xl font-bold updated-font-family'>Gauhar Fatima (Batch -2013-14) </h1>
                                 <p className='mb-2 text-xl updated-font-family'>Assistant Professor (Through UKPSC)</p>
                                 <p className='mb-2 text-xl updated-font-family'>SOS Children’s Villages of India</p>
@@ -239,7 +239,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
 
                     {/* 4th */}
                     <div class=" mt-2 mb-[50px] ml-6 mr-6">
-                        <div class="flex justify-center flexProp flex-col lg:flex-row">
+                        <div class="flex justify-center flexProp flex-col-reverse lg:flex-row">
                             <div className='mr-6'>
                                 <h1 className='mb-2 text-2xl font-bold updated-font-family'>Himanshu Rawat (Batch -2015-17)</h1>
                                 <p className='mb-2 text-xl updated-font-family'>Teacher</p>
@@ -248,7 +248,7 @@ const Alumni = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                                     It had  been a while  for  me after  leaving formal education  but coming  here just  not made  me a disciplined   person but  also motivated  me  to  explore  my capabilities, skills  and  talents. My   perception  towards the teaching profession especially with the experience during my practice teaching.
                                 </p>
                             </div>
-                            <img src={teacher4} class="teachers-picture  picture-shadow" alt='' />
+                            <img src={teacher4} class="mb-3 lg:mb-0 teachers-picture  picture-shadow" alt='' />
                         </div>
                     </div>
 

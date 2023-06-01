@@ -479,7 +479,37 @@
     display: none;
 }
 
+.applyBtn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Poppins';
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #2D4A9D;
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    animation: moving2 3s ease-in-out infinite;
+}
 
+@keyframes moving2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.applyBtn:hover {
+    background: #00abec;
+    color: white
+}
 
 
 @media (max-width: 768px) {
@@ -514,6 +544,7 @@
 
     .abs-class-large {
         margin-bottom: 25px !important;
+        margin-top: -158px !important;
     }
 
     .moving-para {
@@ -616,5 +647,13 @@
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
+    }
+
+    .footer {
+        row-gap: 0 !important;
+    }
+
+    .backgroundImgae {
+        display: none !important;
     }
 }

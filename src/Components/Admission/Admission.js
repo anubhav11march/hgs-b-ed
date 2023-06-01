@@ -189,7 +189,7 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
 
 
                                 <div className='mb-6'>
-                                    <p className='block mx-auto mb-2 text-xl font-bold'>Kumaun University B.Ed Entrance Exam 2022</p>
+                                    <p className='block mx-auto mb-2 text-xl font-bold updated-font-family'>Kumaun University B.Ed Entrance Exam 2022</p>
                                     <p className='mt-2 updated-font-family teacher-paragraph'>
                                         Kumaun University will release notification for B.Ed admission 2022. The B.Ed entrance exam 2022 will beheld as per schedule. The candidates who qualify for the entrance test are then required to participate in the counseling.
                                     </p>
@@ -296,7 +296,7 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
 
                                 <div className='mb-6'>
                                     <p className='mb-2 text-xl font-bold updated-font-family'>Kumaun University B.Ed 2022 Admit Card</p>
-                                    <p className='mt-2 teacher-paragraph'>
+                                    <p className='mt-2 teacher-paragraph updated-font-family'>
                                         Students who have successfully submitted their duly filled application form before the last scheduled date can
                                         download their admit cards for the exam. It is available on the official website for the candidates to download.
                                         It is mandatory that the candidates carry their admit cards on the day of examination. Candidates without a
@@ -344,43 +344,43 @@ const Admission = ({ setShowNavbar, setOverview, setLidership, setProgramsOffere
                                             <thead>
                                                 <tr className='hover-table hover-table-top-row'>
                                                     <th className='text-xl normal-case table-data updated-font-family'>Course Level</th>
-                                                    <th className='text-xl normal-case table-data updated-font-family'>[B.Ed] Bachelor Of Education</th>
+                                                    <th className='text-xl normal-case table-data updated-font-family text-center'>[B.Ed] Bachelor Of Education</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr className='hover-table'>
                                                     <th className='table-data updated-font-family teacher-paragraph'>Course Level</th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center'>Graduation</span> </td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center text-center'>Graduation</span> </td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
                                                     <th className='table-data updated-font-family teacher-paragraph'>Course Fees</th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center'>State Quota - 42000.00</span> </td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center text-center'>State Quota - 42000.00</span> </td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
                                                     <th className='table-data'></th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center'>Management Quota- 55000.00</span> </td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center text-center'>Management Quota- 55000.00</span> </td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
                                                     <th className='table-data'></th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center'>NRI Quota- 75000.00</span> </td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center text-center'>NRI Quota- 75000.00</span> </td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
                                                     <th className='table-data updated-font-family teacher-paragraph'>University Name</th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline'>Kumaun University</span></td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline text-center'>Kumaun University</span></td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
                                                     <th className='table-data updated-font-family teacher-paragraph'>Official Website</th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline'>https://www.kunainital.ac.in/</span></td>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline text-center'>https://www.kunainital.ac.in/</span></td>
                                                 </tr>
 
                                                 <tr className='hover-table'>
-                                                    <th className='table-data updated-font-family teacher-paragraph'>Admission 2022-22</th>
-                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline'>Kumaun University Admission 2022</span></td>
+                                                    <th className='table-data updated-font-family teacher-paragraph'>Admission 2022-23</th>
+                                                    <td className='table-data updated-font-family teacher-paragraph'><span className='flex justify-center underline text-center'>Kumaun University Admission 2022</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>

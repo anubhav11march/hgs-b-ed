@@ -166,7 +166,7 @@ const FacultyAndStaf = ({ setShowNavbar, setOverview, setLidership, setProgramsO
                 </div>
                 <img className='w-full' src={aboutUs} alt="" />
                 <div className='flex flex-col justify-between md:flex-row'>
-                    <div className='flex justify-center mt-6 ml-6 updated-font-family md:grid lg:grid'>
+                    <div className='flex lg:justify-center mt-6 ml-6 updated-font-family md:grid lg:grid'>
                         <div>
                             <div className='leadership'>
                                 <p onClick={handleOverView} className='flex items-center h-12 my-2 forTextHover updated-font-family'>Overview</p>

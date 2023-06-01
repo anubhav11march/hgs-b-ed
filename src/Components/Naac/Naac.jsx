@@ -12,6 +12,7 @@ import SideBar from "../SideBar/SideBar";
 
 import { BsList } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import NavbarMenu from "../NavbarMenu/NavbarMenu";
 
 const Naac = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
     const navigate = useNavigate();
@@ -166,6 +167,7 @@ const Naac = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, se
                         <div>
                             <SideBar />
                         </div>
+                        <NavbarMenu isShow={isShow} handleClick={handleClick} />
 
                         <div className='leadership-info'>
                             <div className='flex justify-center'>

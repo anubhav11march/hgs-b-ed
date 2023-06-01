@@ -23,7 +23,7 @@ function SideBar(props) {
                     setIsSideNav(!isSideNav);
                 }}
             >
-                <div className="color-white f-1-2">B.ED. College</div>
+                <div className="color-white f-1-2">J.N. Kaul Institute</div>
                 <div>
                     <BsChevronRight
                         color="white"

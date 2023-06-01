@@ -108,7 +108,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
                 </div>
 
                 <div className=''>
-                    <span style={{ color: '#2D4A9D' }} class="footer-heading mb-[20px]">Quick Link</span>
+                    <span style={{ color: '#2D4A9D' }} class="footer-heading mb-[20px] hidden lg:block">Quick Link</span>
                     <a onClick={handleLeadership} class="link link-hover contact-info mb-[20px] lg:ml-20 md:ml-20">Leadership</a>
                     <a onClick={handleAlumni} class="link link-hover flex justify-center items-center mb-[20px] lg:ml-20 md:ml-20">
                         <p className='contact-info'>Alumni</p>
@@ -118,7 +118,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
 
                 {/* ml-2 md:ml-10 lg:ml-2 */}
                 <div className=''>
-                    <span style={{ color: '#2D4A9D' }} class="footer-heading mb-[20px]">Quick Link</span>
+                    <span style={{ color: '#2D4A9D' }} class="footer-heading mb-[20px] hidden lg:block">Quick Link</span>
                     <a onClick={handleAdmission} class="link link-hover flex justify-center items-center mb-[20px] lg:ml-20 md:ml-20">
                         <p className='contact-info'>Admission</p>
                     </a>

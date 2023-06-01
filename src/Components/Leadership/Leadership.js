@@ -210,8 +210,8 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
                     </div>
 
                     {/* 2nd one */}
-                    <div class="mb-[50px] ml-6 mr-6 mt-6 hidden md:block lg:block">
-                        <div class="flex justify-center flexProp flex-col lg:flex-row">
+                    <div class="mb-[50px] ml-6 mr-6 mt-6 ">
+                        <div class="flex justify-center flexProp flex-col-reverse lg:flex-row">
                             <div className=''>
                                 <h1 className='mb-2 text-2xl font-bold-heading updated-font-family'>Secretary General</h1>
                                 <p className='mb-2 text-xl updated-font-family'>Sumanta Kar</p>
@@ -220,7 +220,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
                                     Education at SOS Hermann Gmeiner Schools has always meant the Holistic Development of a student – we believe that each child is entitled to the best possible skill set for their future, therefore, each child entrusted with us will receive an education that is in its finest form.
                                 </p>
                             </div>
-                            <img src={teacher2} class="teachers-picture  picture-shadow mr-6" alt='' />
+                            <img src={teacher2} class="teachers-picture mx-auto picture-shadow lg:mr-6" alt='' />
                         </div>
                         <p className='mt-2 updated-font-family teacher-paragraph'>
                             Education is preparation for life, it should be an enjoyable, interactive and ongoing process to make the students confident young adults, sensitive to global issues, committed citizens who are aware of the happenings of the world and sensible individuals with a positive attitude.
@@ -232,7 +232,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
 
 
 
-                    <div class="mb-[50px] ml-6 mr-6 mt-6 block md:hidden lg:hidden">
+                    {/* <div class="mb-[50px] ml-6 mr-6 mt-6  block lg:hidden ">
                         <div class="flex justify-center lg:block md:block mx-auto flexProp flex-col lg:flex-row">
                             <img src={teacher2} class="teachers-picture  picture-shadow mr-6" alt='' />
                             <div className=''>
@@ -253,7 +253,7 @@ const Leadership = ({ setShowNavbar, setOverview, setLidership, setProgramsOffer
                             Students should have a strong character and a good understanding of their humane and emotional sides. All our Hermann Gmeiner Schools have been actively engaged in relating to, understanding and working with communities around our schools.
                             Safeguarding of children remains a top priority and they are nurtured through a theme-based curriculum and actively engage in experiential learning. Our teachers and principals play a pivotal role in the development of each child. Our alumni are our brand ambassadors, who leave a lasting footprint in whatever profession they choose to pursue. Each student who joins us becomes a future world leader, ready to bring progressive change and make our nation proud.
                         </p>
-                    </div>
+                    </div> */}
 
 
 

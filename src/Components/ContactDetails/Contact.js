@@ -57,10 +57,10 @@ const Contact = () => {
             </div>
             <NavbarMenu isShow={isShow} handleClick={handleClick} />
             <div className='mb-12'>
-                <h1 className='flex justify-center mt-20 mb-6 text-5xl font-bold love-to-hear updated-font-family'>We'd love to hear from you.</h1>
+                <h1 className='flex justify-center mt-20 mb-8 lg:mb-6 text-5xl font-bold love-to-hear updated-font-family'>We'd love to hear from you.</h1>
                 {/* <div class="hero"> */}
                 <div class="">
-                    <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="hero-content flex-col-reverse  lg:flex-row-reverse">
                         <div className='lg:ml-28'>
                             <div>
                                 <div class="card flex-shrink-0 w-96 shadow-2xl bg-base-100">
