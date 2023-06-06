@@ -32,22 +32,22 @@ export const ResultsAcademicsData = [
     },
     {
         id: 5,
-        title: 'AQAR Report 2017 - 2018',
+        title: 'AQAR REPORT 2017 - 2018',
         document: AQAR2017,
     },
     {
         id: 6,
-        title: 'AQAR Report 2018 - 2019',
+        title: 'AQAR REPORT 2018 - 2019',
         document: AQAR2018,
     },
     {
         id: 7,
-        title: 'AQAR Report 2019 - 2020',
+        title: 'AQAR REPORT 2019 - 2020',
         document: AQAR2019,
     },
     {
         id: 8,
-        title: 'AQAR Report 2020 - 2021',
+        title: 'AQAR REPORT 2020 - 2021',
         document: AQAR2020,
     },
 ]
