@@ -8,6 +8,7 @@ import AQAR2017 from "../pdf/ResultsAcademics/AQAR Report 2017 - 2018.pdf"
 import AQAR2018 from "../pdf/ResultsAcademics/AQAR report 2018 -2020.pdf"
 import AQAR2019 from "../pdf/ResultsAcademics/AQAR report 2019 -2020.pdf"
 import AQAR2020 from "../pdf/ResultsAcademics/AQAR Report 2020 - 2021.pdf"
+import MOU from "../pdf/ResultsAcademics/MOU.PDF"
 
 export const ResultsAcademicsData = [
     {
@@ -49,5 +50,10 @@ export const ResultsAcademicsData = [
         id: 8,
         title: 'AQAR REPORT 2020 - 2021',
         document: AQAR2020,
+    },
+    {
+        id: 9,
+        title: 'MEMORANDUM OF UNDERSTANDING',
+        document: MOU,
     },
 ]
