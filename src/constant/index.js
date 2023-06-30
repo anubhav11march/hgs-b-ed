@@ -2,12 +2,15 @@
 // result documentation
 import ACADEMICCALENDAR from "../pdf/ResultsAcademics/ACADEMICCALENDAR.pdf"
 import IQACMEETINGS from "../pdf/ResultsAcademics/IQAC MEETINGS.pdf"
+import IQACMEETINGS19DEC2022 from "../pdf/ResultsAcademics/IQAC MEETING 19 DEC 2022.pdf"
+import IQACMEETINGS10April2023 from "../pdf/ResultsAcademics/IQAC MEETING 10 APRIL 2023.pdf"
 import StudentSatisfactionSurvey from "../pdf/ResultsAcademics/Student Satisfaction Survey (SSS).pdf"
 import CommitteeMembers from "../pdf/ResultsAcademics/COMMITTEE MEMBERS.pdf"
 import AQAR2017 from "../pdf/ResultsAcademics/AQAR Report 2017 - 2018.pdf"
 import AQAR2018 from "../pdf/ResultsAcademics/AQAR report 2018 -2020.pdf"
 import AQAR2019 from "../pdf/ResultsAcademics/AQAR report 2019 -2020.pdf"
 import AQAR2020 from "../pdf/ResultsAcademics/AQAR Report 2020 - 2021.pdf"
+import AQAR2021 from "../pdf/ResultsAcademics/AQAR Report 2021-2022.pdf"
 import MOU from "../pdf/ResultsAcademics/MOU.PDF"
 
 export const ResultsAcademicsData = [
@@ -53,7 +56,22 @@ export const ResultsAcademicsData = [
     },
     {
         id: 9,
+        title: 'AQAR REPORT 2021 - 2022',
+        document: AQAR2021,
+    },
+    {
+        id: 10,
         title: 'MEMORANDUM OF UNDERSTANDING',
         document: MOU,
+    },
+    {
+        id: 11,
+        title: 'IQAC MEETING 19 DEC 2022',
+        document: IQACMEETINGS19DEC2022,
+    },
+    {
+        id: 12,
+        title: 'IQAC MEETING 10 APRIL 2023',
+        document: IQACMEETINGS10April2023,
     },
 ]
