@@ -72,3 +72,46 @@
 .text-center {
   text-align: center;
 }
+
+.pagination{
+  background-color: #2D4A9D;
+  border-radius: 5px;
+  height: 40px;
+}
+.pagination button{
+  background-color: #2D4A9D;
+  border: none;
+  border-radius: 0;
+}
+.pagination button:hover{
+  background-color: #2D4A9D;
+}
+.paginationContainer svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0px;
+}
+.paginationContainer p{
+    border-right: 1px solid rgb(229, 231, 235);
+    width: 50px;
+    text-align: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+
+.searchBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 5px;
+  height: 40px;
+}
+.searchBox input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

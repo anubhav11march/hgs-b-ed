@@ -6,13 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useParams } from 'react-router-dom';
 
-const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac }) => {
+const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, setAlumni, setAdmission, setFacultiStaff, setContactUs, setNaac , setStudensts}) => {
     const navigate = useNavigate();
     const handleOverView = () => {
         setOverview[1]('setOverview')
         setLidership[1]('')
         setProgramsOffered[1]('')
         setAlumni[1]('')
+        setStudensts[1]("");
         setAdmission[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('')
@@ -27,6 +28,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAlumni[1]('')
         setAdmission[1]('')
         setFacultiStaff[1]('')
+        setStudensts[1]("");
         setContactUs[1]('')
         navigate('/leadership')
     }
@@ -37,6 +39,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAlumni[1]('')
         setAdmission[1]('')
         setFacultiStaff[1]('')
+        setStudensts[1]("");
         setShowNavbar[1](true);
         setContactUs[1]('')
         navigate('/programesOffered')
@@ -46,6 +49,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setLidership[1]('')
         setProgramsOffered[1]('')
         setAlumni[1]('setAlumni')
+        setStudensts[1]("");
         setAdmission[1]('')
         setFacultiStaff[1]('')
         setShowNavbar[1](true);
@@ -60,6 +64,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setAdmission[1]('setAdmission[1]')
         setShowNavbar[1](true);
         setFacultiStaff[1]('')
+        setStudensts[1]("");
         setContactUs[1]('')
         navigate('/admission')
     }
@@ -68,6 +73,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setLidership[1]('')
         setProgramsOffered[1]('')
         setAlumni[1]('')
+        setStudensts[1]("");
         setShowNavbar[1](true);
         setAdmission[1]('')
         setFacultiStaff[1]('setFacultiStaff[1]')
@@ -80,6 +86,7 @@ const Footer = ({ setShowNavbar, setOverview, setLidership, setProgramsOffered, 
         setProgramsOffered[1]('')
         setAlumni[1]('')
         setShowNavbar[1](false);
+        setStudensts[1]("");
         setAdmission[1]('')
         setFacultiStaff[1]('')
         setContactUs[1]('setContactUs[1]')
