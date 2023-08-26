@@ -25,16 +25,12 @@ const Students = ({
     setStudensts,
 }) => {
     const itemsPerPage = 15;
-    const [searchTerm, setSearchTerm] = useState("");
-    const [totalPages, setTotalPages] = useState(
-        Math.ceil(StudentData.length / itemsPerPage)
-    );
+
+    const totalPages = Math.ceil(StudentData.length / itemsPerPage);
     const [currentPage, setCurrentPage] = useState(1);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const [currentItems, setCurrentItems] = useState(
-        StudentData.slice(startIndex, endIndex)
-    ); // [0, 10
+    const currentItems = StudentData.slice(startIndex, endIndex);
 
     const navigate = useNavigate();
     const [isShow, steIsShow] = useState(false);
@@ -178,8 +174,6 @@ const Students = ({
         setCurrentPage(currentPage + 1);
         window.scrollTo(0, 0);
     };
-
-    
 
     return (
         <div className="">
