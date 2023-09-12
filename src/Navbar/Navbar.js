@@ -14,6 +14,7 @@ const Navbar = ({
     setContactUs,
     setNaac,
     setStudensts,
+    setNcte,
 }) => {
     const navigate = useNavigate();
     const [navbar, setNavbar] = useState(false);
@@ -27,6 +28,7 @@ const Navbar = ({
         setStudensts[1]("");
         setFacultiStaff[1]("");
         setContactUs[1]("");
+        setNcte[1]("");
         setShowNavbar[1](false);
         navigate("/");
     };
@@ -40,6 +42,7 @@ const Navbar = ({
         setStudensts[1]("");
         setFacultiStaff[1]("");
         setNaac[1]("");
+        setNcte[1]("");
         setContactUs[1]("");
         navigate("/leadership");
     };
@@ -53,6 +56,7 @@ const Navbar = ({
         setFacultiStaff[1]("");
         setShowNavbar[1](true);
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/programesOffered");
     };
@@ -66,6 +70,7 @@ const Navbar = ({
         setFacultiStaff[1]("");
         setShowNavbar[1](true);
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/alumni");
     };
@@ -79,6 +84,7 @@ const Navbar = ({
         setShowNavbar[1](true);
         setFacultiStaff[1]("");
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/admission");
     };
@@ -92,6 +98,7 @@ const Navbar = ({
         setAdmission[1]("");
         setFacultiStaff[1]("setFacultiStaff[1]");
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/faculty");
     };
@@ -105,8 +112,23 @@ const Navbar = ({
         setStudensts[1]("setStudensts[1]");
         setFacultiStaff[1]("");
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/students");
+    };
+    const handleNCTE = () => {
+        setOverview[1]("");
+        setLidership[1]("");
+        setProgramsOffered[1]("");
+        setAlumni[1]("");
+        setShowNavbar[1](true);
+        setAdmission[1]("");
+        setStudensts[1]("");
+        setFacultiStaff[1]("");
+        setNcte[1]("setNcte");
+        setContactUs[1]("");
+        setNaac[1]("");
+        navigate("/ncte");
     };
     const handleNaac = () => {
         setOverview[1]("");
@@ -116,6 +138,7 @@ const Navbar = ({
         setShowNavbar[1](true);
         setAdmission[1]("");
         setFacultiStaff[1]("");
+        setNcte[1]("");
         setStudensts[1]("");
         setNaac[1]("setNaac[1]");
         setContactUs[1]("");
@@ -130,6 +153,7 @@ const Navbar = ({
         setAdmission[1]("");
         setNaac[1]("");
         setFacultiStaff[1]("");
+        setNcte[1]("");
         setStudensts[1]("");
         setContactUs[1]("setContactUs[1]");
         navigate("/contact");
@@ -158,7 +182,7 @@ const Navbar = ({
                     onClick={handleOverview}
                     className={`items-center ${
                         setOverview[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Overview</h1>
                 </div>
@@ -166,7 +190,7 @@ const Navbar = ({
                     onClick={handleLeadership}
                     className={`items-center ${
                         setLidership[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Leadership</h1>
                 </div>
@@ -176,7 +200,7 @@ const Navbar = ({
                         setProgramsOffered[0]
                             ? "for-background"
                             : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Programs Offered</h1>
                 </div>
@@ -184,15 +208,23 @@ const Navbar = ({
                     onClick={handleNaac}
                     className={`items-center ${
                         setNaac[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">NAAC</h1>
+                </div>
+                <div
+                    onClick={handleNCTE}
+                    className={`items-center ${
+                        setNcte[0] ? "for-background" : "not-selected"
+                    } lg:pe-4  py-4 navbar-topic`}
+                >
+                    <h1 className="font-bold ">NCTE</h1>
                 </div>
                 <div
                     onClick={handleAdmission}
                     className={`items-center ${
                         setAdmission[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Admissions</h1>
                 </div>
@@ -200,7 +232,7 @@ const Navbar = ({
                     onClick={handleFacultiStaff}
                     className={`items-center ${
                         setFacultiStaff[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Faculty & Staff</h1>
                 </div>
@@ -208,15 +240,16 @@ const Navbar = ({
                     onClick={handleStudensts}
                     className={`items-center ${
                         setStudensts[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Students</h1>
                 </div>
+
                 <div
                     onClick={handleAlumni}
                     className={`items-center ${
                         setAlumni[0] ? "for-background" : "not-selected"
-                    } lg:px-4  py-4 navbar-topic`}
+                    } lg:pe-4  py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Alumni</h1>
                 </div>
@@ -224,7 +257,7 @@ const Navbar = ({
                     onClick={handleContactUs}
                     className={`items-center ${
                         setContactUs[0] ? "for-background" : "not-selected"
-                    } lg:px-4 py-4 navbar-topic`}
+                    } lg:pe-4 py-4 navbar-topic`}
                 >
                     <h1 className="font-bold ">Contact Us</h1>
                 </div>

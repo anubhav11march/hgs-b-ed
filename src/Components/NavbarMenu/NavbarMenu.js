@@ -66,7 +66,6 @@ function NavbarMenu(props) {
                         marginTop: "0px",
                     }}
                 >
-
                     <NavLink to={"/leadership"}>
                         <div
                             className={`f-1-2 line-height-3 f-400 color-white mt-1 hover-cyan`}
@@ -95,6 +94,16 @@ function NavbarMenu(props) {
                             }}
                         >
                             NAAC
+                        </div>
+                    </NavLink>
+                    <NavLink to="/ncte">
+                        <div
+                            className={`f-1-2 line-height-3 f-400 color-white mt-1 hover-cyan `}
+                            onClick={() => {
+                                handleClick();
+                            }}
+                        >
+                            NCTE
                         </div>
                     </NavLink>
                     <NavLink to={"/admission"}>

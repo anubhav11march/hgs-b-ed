@@ -23,6 +23,7 @@ const Students = ({
     setContactUs,
     setNaac,
     setStudensts,
+    setNcte,
 }) => {
     const itemsPerPage = 15;
 
@@ -40,6 +41,7 @@ const Students = ({
     };
     const handleOverView = () => {
         setOverview[1]("setOverview");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -52,6 +54,7 @@ const Students = ({
     };
     const handleLeadership = () => {
         setShowNavbar[1](true);
+        setNcte[1]("");
         setOverview[1]("");
         setLidership[1]("setLidership");
         setProgramsOffered[1]("");
@@ -64,6 +67,7 @@ const Students = ({
     };
     const handleProgramsOffered = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("setProgramsOffered");
         setAlumni[1]("");
@@ -76,6 +80,7 @@ const Students = ({
     };
     const handleAlumni = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("setAlumni");
@@ -88,6 +93,7 @@ const Students = ({
     };
     const handleAdmission = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -100,6 +106,7 @@ const Students = ({
     };
     const handleFaculty = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -112,6 +119,7 @@ const Students = ({
     };
     const handleContact = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -124,6 +132,7 @@ const Students = ({
     };
     const handleStudensts = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -137,6 +146,7 @@ const Students = ({
     };
     const handleNaac = () => {
         setOverview[1]("");
+        setNcte[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -146,6 +156,20 @@ const Students = ({
         setNaac[1]("setNaac[1]");
         setContactUs[1]("");
         navigate("/naac");
+    };
+    const handleNcte = () => {
+        setOverview[1]("");
+        setNcte[1]("setNcte");
+        setStudensts[1]("");
+        setLidership[1]("");
+        setProgramsOffered[1]("");
+        setAlumni[1]("");
+        setAdmission[1]("");
+        setFacultiStaff[1]("");
+        setNaac[1]("");
+        setContactUs[1]("");
+        setShowNavbar[1](false);
+        navigate("/ncte");
     };
     const handleScroll = () => {
         if (window.scrollY > 0 && !isScrolled) {
@@ -224,6 +248,12 @@ const Students = ({
                                     className="flex items-center h-12 my-2 forTextHover updated-font-family"
                                 >
                                     NAAC
+                                </p>
+                                <p
+                                    onClick={handleNcte}
+                                    className="flex items-center h-12 my-2 forTextHover updated-font-family"
+                                >
+                                    NCTE
                                 </p>
                                 <p
                                     onClick={handleAdmission}

@@ -1,20 +1,20 @@
 import { useNavigate } from "react-router-dom";
 
-import "./Naac.css";
+import "./Ncte.css";
 // import aboutUs from './../assets/images/leadership.JPG'
 import aboutUs from "./../assets/images/Landing photo.jpeg";
 import sosChildrenVillage from "./../assets/images/sos_logo 3.png";
 import location from "./../assets/icons/location.png";
 import email from "./../assets/icons/email.png";
 import phone from "./../assets/icons/footer.png";
-import { ResultsAcademicsData } from "../../constant";
+import { NcteDocument, ResultsAcademicsData } from "../../constant";
 import SideBar from "../SideBar/SideBar";
 
 import { BsList } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 
-const Naac = ({
+const Ncte = ({
     setShowNavbar,
     setOverview,
     setLidership,
@@ -49,6 +49,20 @@ const Naac = ({
         setNcte[1]("");
         navigate("/");
     };
+    const handleNcte = () => {
+        setOverview[1]("");
+        setNcte[1]("setNcte");
+        setStudensts[1]("");
+        setLidership[1]("");
+        setProgramsOffered[1]("");
+        setAlumni[1]("");
+        setAdmission[1]("");
+        setFacultiStaff[1]("");
+        setNaac[1]("");
+        setContactUs[1]("");
+        setShowNavbar[1](false);
+        navigate("/ncte");
+    };
     const handleLeadership = () => {
         setShowNavbar[1](true);
         setOverview[1]("");
@@ -74,8 +88,8 @@ const Naac = ({
         setShowNavbar[1](true);
         setContactUs[1]("");
         setNaac[1]("");
-        setNcte[1]("");
         navigate("/programesOffered");
+        setNcte[1]("");
     };
     const handleAlumni = () => {
         setOverview[1]("");
@@ -88,8 +102,8 @@ const Naac = ({
         setShowNavbar[1](true);
         setContactUs[1]("");
         setNaac[1]("");
-        setNcte[1]("");
         navigate("/alumni");
+        setNcte[1]("");
     };
     const handleAdmission = () => {
         setOverview[1]("");
@@ -97,12 +111,12 @@ const Naac = ({
         setProgramsOffered[1]("");
         setAlumni[1]("");
         setAdmission[1]("setAdmission[1]");
+        setNcte[1]("");
         setStudensts[1]("");
         setShowNavbar[1](true);
         setFacultiStaff[1]("");
         setNaac[1]("");
         setContactUs[1]("");
-        setNcte[1]("");
         navigate("/admission");
     };
     const handleStudensts = () => {
@@ -113,10 +127,10 @@ const Naac = ({
         setShowNavbar[1](true);
         setAdmission[1]("");
         setStudensts[1]("setStudensts[1]");
+        setNcte[1]("");
         setFacultiStaff[1]("");
         setContactUs[1]("");
         setNaac[1]("");
-        setNcte[1]("");
         navigate("/students");
     };
     const handleFaculty = () => {
@@ -127,10 +141,10 @@ const Naac = ({
         setShowNavbar[1](true);
         setAdmission[1]("");
         setFacultiStaff[1]("setFacultiStaff[1]");
+        setNcte[1]("");
         setStudensts[1]("");
         setContactUs[1]("");
         setNaac[1]("");
-        setNcte[1]("");
         navigate("/faculty");
     };
     const handleContact = () => {
@@ -143,8 +157,8 @@ const Naac = ({
         setFacultiStaff[1]("");
         setNaac[1]("");
         setContactUs[1]("setContactUs[1]");
-        setStudensts[1]("");
         setNcte[1]("");
+        setStudensts[1]("");
         navigate("/contact");
     };
     const handleNaac = () => {
@@ -156,24 +170,10 @@ const Naac = ({
         setAdmission[1]("");
         setFacultiStaff[1]("");
         setNaac[1]("setNaac[1]");
-        setStudensts[1]("");
-        setContactUs[1]("");
         setNcte[1]("");
-        navigate("/naac");
-    };
-    const handleNcte = () => {
-        setOverview[1]("");
-        setNcte[1]("setNcte");
         setStudensts[1]("");
-        setLidership[1]("");
-        setProgramsOffered[1]("");
-        setAlumni[1]("");
-        setAdmission[1]("");
-        setFacultiStaff[1]("");
-        setNaac[1]("");
         setContactUs[1]("");
-        setShowNavbar[1](false);
-        navigate("/ncte");
+        navigate("/naac");
     };
     const handleScroll = () => {
         if (window.scrollY > 0 && !isScrolled) {
@@ -317,7 +317,7 @@ const Naac = ({
                             style={{ color: "#2D4A9D" }}
                             className="flex mt-6 mb-6 ml-8 text-4xl font-bold leadership-heading updated-font-family"
                         >
-                            NAAC
+                            NCTE
                         </h1>
                         <p className="flex mb-2 ml-8 font-bold  text-xl updated-font-family">
                             IMPORTANT DOCUMENTS
@@ -348,7 +348,7 @@ const Naac = ({
                                 </tr>
                             </thead>
                             <tbody>
-                                {ResultsAcademicsData.map((doc) => (
+                                {NcteDocument.map((doc) => (
                                     <tr className="hover-table">
                                         <th className="table-data updated-font-family tableFontStyle  teacher-paragraph">
                                             {doc.id}
@@ -377,4 +377,4 @@ const Naac = ({
     );
 };
 
-export default Naac;
+export default Ncte;

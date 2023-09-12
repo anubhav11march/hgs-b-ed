@@ -21,6 +21,7 @@ const ProgramesOffered = ({
     setContactUs,
     setNaac,
     setStudensts,
+    setNcte,
 }) => {
     const navigate = useNavigate();
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,12 +41,14 @@ const ProgramesOffered = ({
         setNaac[1]("");
         setContactUs[1]("");
         setShowNavbar[1](false);
+        setNcte[1]("");
         navigate("/");
     };
     const handleLeadership = () => {
         setShowNavbar[1](true);
         setOverview[1]("");
         setLidership[1]("setLidership");
+        setNcte[1]("");
         setStudensts[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
@@ -59,6 +62,7 @@ const ProgramesOffered = ({
         setOverview[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("setProgramsOffered");
+        setNcte[1]("");
         setStudensts[1]("");
         setAlumni[1]("");
         setAdmission[1]("");
@@ -73,6 +77,7 @@ const ProgramesOffered = ({
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("setAlumni");
+        setNcte[1]("");
         setStudensts[1]("");
         setAdmission[1]("");
         setFacultiStaff[1]("");
@@ -87,6 +92,7 @@ const ProgramesOffered = ({
         setProgramsOffered[1]("");
         setAlumni[1]("");
         setAdmission[1]("setAdmission[1]");
+        setNcte[1]("");
         setStudensts[1]("");
         setShowNavbar[1](true);
         setFacultiStaff[1]("");
@@ -103,6 +109,7 @@ const ProgramesOffered = ({
         setAdmission[1]("");
         setNaac[1]("");
         setFacultiStaff[1]("setFacultiStaff[1]");
+        setNcte[1]("");
         setStudensts[1]("");
         setContactUs[1]("");
         navigate("/faculty");
@@ -117,6 +124,7 @@ const ProgramesOffered = ({
         setFacultiStaff[1]("");
         setNaac[1]("");
         setContactUs[1]("setContactUs[1]");
+        setNcte[1]("");
         setStudensts[1]("");
         navigate("/contact");
     };
@@ -129,6 +137,7 @@ const ProgramesOffered = ({
         setAdmission[1]("");
         setFacultiStaff[1]("");
         setNaac[1]("setNaac[1]");
+        setNcte[1]("");
         setContactUs[1]("");
         setStudensts[1]("");
         navigate("/naac");
@@ -141,10 +150,25 @@ const ProgramesOffered = ({
         setShowNavbar[1](true);
         setAdmission[1]("");
         setStudensts[1]("setStudensts[1]");
+        setNcte[1]("");
         setFacultiStaff[1]("");
         setContactUs[1]("");
         setNaac[1]("");
         navigate("/students");
+    };
+    const handleNcte = () => {
+        setOverview[1]("");
+        setNcte[1]("setNcte");
+        setStudensts[1]("");
+        setLidership[1]("");
+        setProgramsOffered[1]("");
+        setAlumni[1]("");
+        setAdmission[1]("");
+        setFacultiStaff[1]("");
+        setNaac[1]("");
+        setContactUs[1]("");
+        setShowNavbar[1](false);
+        navigate("/ncte");
     };
     const handleScroll = () => {
         if (window.scrollY > 0 && !isScrolled) {
@@ -210,6 +234,12 @@ const ProgramesOffered = ({
                                 className="flex items-center h-12 my-2 forTextHover updated-font-family"
                             >
                                 NAAC
+                            </p>
+                            <p
+                                onClick={handleNcte}
+                                className="flex items-center h-12 my-2 forTextHover updated-font-family"
+                            >
+                                NCTE
                             </p>
                             <p
                                 onClick={handleAdmission}

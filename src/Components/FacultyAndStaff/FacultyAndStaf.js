@@ -41,7 +41,8 @@ const FacultyAndStaf = ({
     setFacultiStaff,
     setContactUs,
     setNaac,
-    setStudensts
+    setStudensts,
+    setNcte,
 }) => {
     const navigate = useNavigate();
     const [isShow, steIsShow] = useState(false);
@@ -59,6 +60,7 @@ const FacultyAndStaf = ({
         setFacultiStaff[1]("");
         setContactUs[1]("");
         setStudensts[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         setShowNavbar[1](false);
         navigate("/");
@@ -67,11 +69,12 @@ const FacultyAndStaf = ({
         setShowNavbar[1](true);
         setOverview[1]("");
         setLidership[1]("setLidership");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("");
         setAdmission[1]("");
         setFacultiStaff[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         setContactUs[1]("");
         navigate("/leadership");
@@ -80,12 +83,13 @@ const FacultyAndStaf = ({
         setOverview[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("setProgramsOffered");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setAlumni[1]("");
         setAdmission[1]("");
         setFacultiStaff[1]("");
         setNaac[1]("");
         setShowNavbar[1](true);
+        setNcte[1]("");
         setContactUs[1]("");
         navigate("/programesOffered");
     };
@@ -94,11 +98,12 @@ const FacultyAndStaf = ({
         setLidership[1]("");
         setProgramsOffered[1]("");
         setAlumni[1]("setAlumni");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setAdmission[1]("");
         setFacultiStaff[1]("");
         setShowNavbar[1](true);
         setContactUs[1]("");
+        setNcte[1]("");
         setNaac[1]("");
         navigate("/alumni");
     };
@@ -108,10 +113,11 @@ const FacultyAndStaf = ({
         setProgramsOffered[1]("");
         setAlumni[1]("");
         setAdmission[1]("setAdmission[1]");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setShowNavbar[1](true);
         setFacultiStaff[1]("");
         setNaac[1]("");
+        setNcte[1]("");
         setContactUs[1]("");
         navigate("/admission");
     };
@@ -124,8 +130,9 @@ const FacultyAndStaf = ({
         setAdmission[1]("");
         setNaac[1]("");
         setFacultiStaff[1]("setFacultiStaff[1]");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setContactUs[1]("");
+        setNcte[1]("");
         navigate("/faculty");
     };
     const handleContact = () => {
@@ -138,20 +145,22 @@ const FacultyAndStaf = ({
         setFacultiStaff[1]("");
         setNaac[1]("");
         setContactUs[1]("setContactUs[1]");
-         setStudensts[1]("");
+        setStudensts[1]("");
+        setNcte[1]("");
         navigate("/contact");
     };
     const handleNaac = () => {
         setOverview[1]("");
         setLidership[1]("");
         setProgramsOffered[1]("");
-         setStudensts[1]("");
+        setStudensts[1]("");
         setAlumni[1]("");
         setShowNavbar[1](true);
         setAdmission[1]("");
         setFacultiStaff[1]("");
         setNaac[1]("setNaac[1]");
         setContactUs[1]("");
+        setNcte[1]("");
         navigate("/naac");
     };
     const handleStudensts = () => {
@@ -165,7 +174,22 @@ const FacultyAndStaf = ({
         setFacultiStaff[1]("");
         setContactUs[1]("");
         setNaac[1]("");
+        setNcte[1]("");
         navigate("/students");
+    };
+    const handleNcte = () => {
+        setOverview[1]("");
+        setNcte[1]("setNcte");
+        setStudensts[1]("");
+        setLidership[1]("");
+        setProgramsOffered[1]("");
+        setAlumni[1]("");
+        setAdmission[1]("");
+        setFacultiStaff[1]("");
+        setNaac[1]("");
+        setContactUs[1]("");
+        setShowNavbar[1](false);
+        navigate("/ncte");
     };
     const handleScroll = () => {
         if (window.scrollY > 0 && !isScrolled) {
@@ -231,6 +255,12 @@ const FacultyAndStaf = ({
                                     className="flex items-center h-12 my-2 forTextHover updated-font-family"
                                 >
                                     NAAC
+                                </p>
+                                <p
+                                    onClick={handleNcte}
+                                    className="flex items-center h-12 my-2 forTextHover updated-font-family"
+                                >
+                                    NCTE
                                 </p>
                                 <p
                                     onClick={handleAdmission}

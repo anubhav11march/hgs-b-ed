@@ -12,6 +12,7 @@ import ProgramesOffered from "./Components/ProgramesOffered/ProgramesOffered";
 import ScrollToTop from "./Components/ScrollToTop";
 import Navbar from "./Navbar/Navbar";
 import Naac from "./Components/Naac/Naac";
+import Ncte from "./Components/Ncte/Ncte";
 import Students from "./Components/Students/Students";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     const [students, setStudensts] = useState("");
     const [contactUs, setContactUs] = useState("");
     const [naac, setNaac] = useState("");
+    const [ncte, setNcte] = useState("");
     const [quicklink, setQuickLink] = useState("");
 
     return (
@@ -40,6 +42,7 @@ function App() {
                     setFacultiStaff={[facultiStaff, setFacultiStaff]}
                     setContactUs={[contactUs, setContactUs]}
                     setNaac={[naac, setNaac]}
+                    setNcte={[ncte, setNcte]}
                     setStudensts={[students, setStudensts]}
                 ></Navbar>
                 <ScrollToTop></ScrollToTop>
@@ -66,6 +69,7 @@ function App() {
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
                                 setStudensts={[students, setStudensts]}
+                                setNcte={[ncte, setNcte]}
                             ></Contact>
                         }
                     ></Route>
@@ -90,6 +94,7 @@ function App() {
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
                                 setStudensts={[students, setStudensts]}
+                                setNcte={[ncte, setNcte]}
                             ></FacultyAndStaf>
                         }
                     ></Route>
@@ -112,8 +117,33 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></Naac>
+                        }
+                    ></Route>
+                    <Route
+                        path="/ncte"
+                        element={
+                            <Ncte
+                                setShowNavbar={[showNavbar, setShowNavbar]}
+                                setOverview={[overView, setOverview]}
+                                setLidership={[leadership, setLidership]}
+                                setProgramsOffered={[
+                                    programsOffered,
+                                    setProgramsOffered,
+                                ]}
+                                setAlumni={[alumni, setAlumni]}
+                                setAdmission={[admission, setAdmission]}
+                                setFacultiStaff={[
+                                    facultiStaff,
+                                    setFacultiStaff,
+                                ]}
+                                setContactUs={[contactUs, setContactUs]}
+                                setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
+                                setStudensts={[students, setStudensts]}
+                            ></Ncte>
                         }
                     ></Route>
 
@@ -136,6 +166,7 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></Alumni>
                         }
@@ -159,6 +190,7 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></Students>
                         }
@@ -183,6 +215,7 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></Leadership>
                         }
@@ -207,6 +240,7 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></Admission>
                         }
@@ -231,6 +265,7 @@ function App() {
                                 ]}
                                 setContactUs={[contactUs, setContactUs]}
                                 setNaac={[naac, setNaac]}
+                                setNcte={[ncte, setNcte]}
                                 setStudensts={[students, setStudensts]}
                             ></ProgramesOffered>
                         }
@@ -247,6 +282,7 @@ function App() {
                 setFacultiStaff={[facultiStaff, setFacultiStaff]}
                 setContactUs={[contactUs, setContactUs]}
                 setNaac={[naac, setNaac]}
+                setNcte={[ncte, setNcte]}
                 setStudensts={[students, setStudensts]}
             ></Footer>
         </div>
