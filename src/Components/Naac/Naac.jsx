@@ -289,7 +289,7 @@ const Naac = ({
                                     alt=""
                                 />
                                 <p className="flex forTextHover updated-font-family">
-                                    J N Kaul Institute of Education Bhimtal SOS
+                                SOS J N Kaul Institute of Education Bhimtal SOS
                                     Complex, Tallital Bhimtal Nainital,
                                     Uttrakhand, India, 263136
                                 </p>

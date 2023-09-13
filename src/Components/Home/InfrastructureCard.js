@@ -122,7 +122,7 @@ const InfrastructureCard = () => {
                 </div>
             </div>
             <div className='lg:w-[1100px] md:w-[1100px] block mx-auto'>
-                <p className='mt-4 text-xl updated-font-family'>J. N. Kaul institute of Education, Bhimtal campus situated in surrounded with beautiful ground and lush greenery, which consists of five huge classrooms, music room, library, computer lab, play ground. The whole campus covered with CCTV camera etc.
+                <p className='mt-4 text-xl updated-font-family'>SOS J. N. Kaul institute of Education, Bhimtal campus situated in surrounded with beautiful ground and lush greenery, which consists of five huge classrooms, music room, library, computer lab, play ground. The whole campus covered with CCTV camera etc.
                 </p>
             </div>
 

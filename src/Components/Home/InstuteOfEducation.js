@@ -87,7 +87,7 @@ const InstuteOfEducation = () => {
                                         style={{ color: "#2D4A9D" }}
                                         className="instute font updated-font-family"
                                     >
-                                        J.N. KAUL INSTITUTE OF EDUCATION
+                                       SOS J.N. KAUL INSTITUTE OF EDUCATION
                                     </h1>
                                     <p
                                         style={{ color: "#2D4A9D" }}

@@ -287,7 +287,7 @@ const ProgramesOffered = ({
                                     alt=""
                                 />
                                 <p className="flex forTexthover-table updated-font-family">
-                                    J N Kaul Institute of Education Bhimtal SOS
+                                SOS J N Kaul Institute of Education Bhimtal SOS
                                     Complex, Tallital Bhimtal Nainital,
                                     Uttrakhand, India, 263136
                                 </p>

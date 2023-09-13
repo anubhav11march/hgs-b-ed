@@ -303,9 +303,9 @@ const Students = ({
                                         alt=""
                                     />
                                     <p className="flex forTextHover updated-font-family">
-                                        J N Kaul Institute of Education Bhimtal
-                                        SOS Complex, Tallital Bhimtal Nainital,
-                                        Uttrakhand, India, 263136
+                                        SOS J N Kaul Institute of Education
+                                        Bhimtal SOS Complex, Tallital Bhimtal
+                                        Nainital, Uttrakhand, India, 263136
                                     </p>
                                 </div>
                                 <div className="flex items-center justify-center my-4 mr-6">

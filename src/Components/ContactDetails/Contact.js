@@ -118,7 +118,7 @@ const Contact = () => {
                         <div className='lg:mr-28'>
                             <div className='mb-12'>
                                 <h1 className='mb-2 text-2xl font-bold updated-font-family'>Address</h1>
-                                <p className='text-xl updated-font-family'>J N Kaul Institute of Education Bhimtal  <br></br> SOS Complex, Tallital Bhimtal <br></br>
+                                <p className='text-xl updated-font-family'>SOS J N Kaul Institute of Education Bhimtal  <br></br> SOS Complex, Tallital Bhimtal <br></br>
                                     Nainital, Uttrakhand, India, 263136
                                 </p>
                             </div>
