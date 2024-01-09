@@ -2,21 +2,21 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import photo1 from './../assets/images/Degree College Media/1.JPG'
-import photo2 from './../assets/images/Degree College Media/2.JPG'
-import photo3 from './../assets/images/Degree College Media/3.JPG'
-import photo4 from './../assets/images/Degree College Media/4.JPG'
-import photo5 from './../assets/images/Degree College Media/5.JPG'
-import photo6 from './../assets/images/Degree College Media/6.JPG'
-import photo7 from './../assets/images/Degree College Media/7.JPG'
-import photo8 from './../assets/images/Degree College Media/8.JPG'
-import photo9 from './../assets/images/Degree College Media/9.JPG'
-import photo10 from './../assets/images/Degree College Media/10.JPG'
-import photo11 from './../assets/images/Degree College Media/11.JPG'
-import photo12 from './../assets/images/Degree College Media/12.JPG'
-import photo13 from './../assets/images/Degree College Media/13.JPG'
-import photo14 from './../assets/images/Degree College Media/14.JPG'
-import photo15 from './../assets/images/Degree College Media/15.JPG'
+import photo1 from './../assets/images/Degree College Media/1.jpg'
+import photo2 from './../assets/images/Degree College Media/2.jpg'
+import photo3 from './../assets/images/Degree College Media/3.jpg'
+import photo4 from './../assets/images/Degree College Media/4.jpg'
+import photo5 from './../assets/images/Degree College Media/5.jpg'
+import photo6 from './../assets/images/Degree College Media/6.jpg'
+import photo7 from './../assets/images/Degree College Media/7.jpg'
+import photo8 from './../assets/images/Degree College Media/8.jpg'
+import photo9 from './../assets/images/Degree College Media/9.jpg'
+import photo10 from './../assets/images/Degree College Media/10.jpg'
+import photo11 from './../assets/images/Degree College Media/11.jpg'
+import photo12 from './../assets/images/Degree College Media/12.jpg'
+import photo13 from './../assets/images/Degree College Media/13.jpg'
+import photo14 from './../assets/images/Degree College Media/14.jpg'
+import photo15 from './../assets/images/Degree College Media/15.jpg'
 
 
 
