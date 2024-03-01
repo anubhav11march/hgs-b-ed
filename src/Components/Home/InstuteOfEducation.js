@@ -93,7 +93,7 @@ const InstuteOfEducation = () => {
                     style={{ color: "#2D4A9D" }}
                     className="font bed-college updated-font-family"
                   >
-                    B.ED. College, Bhimtal
+                    B.A, B.ED. College, Bhimtal
                   </p>
                 </div>
                 <div className="mr-0 lg:mr-10">
