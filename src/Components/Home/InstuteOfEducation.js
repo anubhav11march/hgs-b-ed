@@ -93,7 +93,7 @@ const InstuteOfEducation = () => {
                     style={{ color: "#2D4A9D" }}
                     className="font bed-college updated-font-family"
                   >
-                    B.A, B.ED. College, Bhimtal
+                    B.A, B.ED, and B.Sc College, Bhimtal
                   </p>
                 </div>
                 <div className="mr-0 lg:mr-10">
@@ -140,7 +140,7 @@ const InstuteOfEducation = () => {
       </div>
       <p className="pt-0 lg:pt-8 welcome moving-para">
         <span style={{ color: "rgb(45, 74, 157)" }}> Courses Offered: </span>{" "}
-        B.A. and B.Ed.
+        B.A.,B.Ed. and B.Sc
       </p>
 
       <AboutInstitution></AboutInstitution>
