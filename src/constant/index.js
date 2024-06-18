@@ -10,6 +10,7 @@ import AQAR2018 from "../pdf/ResultsAcademics/AQAR report 2018 -2020.pdf";
 import AQAR2019 from "../pdf/ResultsAcademics/AQAR report 2019 -2020.pdf";
 import AQAR2020 from "../pdf/ResultsAcademics/AQAR Report 2020 - 2021.pdf";
 import AQAR2021 from "../pdf/ResultsAcademics/AQAR Report 2021-2022.pdf";
+import AQAR2022 from "../pdf/ResultsAcademics/AQAR 2022 -23 (1).pdf";
 import MOU from "../pdf/ResultsAcademics/MOU.PDF";
 import Activity from "../pdf/new/Activity 2024_240109_101610.pdf";
 import AnnualReport from "../pdf/new/Annual ReportPDF_240109_101906.pdf";
@@ -85,36 +86,41 @@ export const ResultsAcademicsData = [
   },
   {
     id: 10,
+    title: "AQAR REPORT 2022 - 2023",
+    document: AQAR2022,
+  },
+  {
+    id: 11,
     title: "MEMORANDUM OF UNDERSTANDING",
     document: MOU,
   },
   {
-    id: 11,
+    id: 12,
     title: "IQAC MEETING 19 DEC 2022",
     document: IQACMEETINGS19DEC2022,
   },
   {
-    id: 12,
+    id: 13,
     title: "IQAC MEETING 10 APRIL 2023",
     document: IQACMEETINGS10April2023,
   },
   {
-    id: 13,
+    id: 14,
     title: "Activity 2024",
     document: Activity,
   },
   {
-    id: 14,
+    id: 15,
     title: "Annual Report",
     document: AnnualReport,
   },
   {
-    id: 15,
+    id: 16,
     title: "IQAC (action taken report)",
     document: ActiontakenReport,
   },
   {
-    id: 16,
+    id: 17,
     title: "IQAC members and minutes of meetings",
     document: MembersAndminutes,
   },
@@ -124,7 +130,7 @@ export const ResultsAcademicsData = [
   //     document: MOUPDF,
   // },
   {
-    id: 17,
+    id: 18,
     title: "SEMESTER WISE CALENDER 21 -23 and 22-24",
     document: SEMESTERWISECALENDER,
   },
