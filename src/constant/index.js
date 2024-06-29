@@ -15,10 +15,11 @@ import MOU from "../pdf/ResultsAcademics/MOU.PDF";
 import Activity from "../pdf/new/Activity 2024_240109_101610.pdf";
 import AnnualReport from "../pdf/new/Annual ReportPDF_240109_101906.pdf";
 import ActiontakenReport from "../pdf/new/IQAC (action taken report)_240109_101831.pdf";
-import MembersAndminutes from "../pdf/new/IQAC members and minutes of meetings (1)PDF_240109_101804.pdf";
+import MembersAndminutes from "../pdf/new/IQAC Meeting, minutes with Report.pdf";
 import MOUPDF from "../pdf/new/MOUPDF_240109_101649.pdf";
 import SEMESTERWISECALENDER from "../pdf/new/SEMESTER WISE CALENDER 21 -23 and 22-24_240109_101715.pdf";
-
+import RTI from "../pdf/new/RTI declaration Under Section 4 (1)(b).PDF";
+import rag from "../pdf/new/Anti Ragging_page-0001.pdf";
 import NCTE2005 from "../pdf/ncte/NCTE Order 2005.pdf";
 import NCTE2015 from "../pdf/ncte/NCTE ORDERS.pdf";
 import affilation from "../pdf/ncte/3 AFFILIATION ORDERS.pdf";
@@ -133,6 +134,16 @@ export const ResultsAcademicsData = [
     id: 18,
     title: "SEMESTER WISE CALENDER 21 -23 and 22-24",
     document: SEMESTERWISECALENDER,
+  },
+  {
+    id: 19,
+    title: "Anti Ragging",
+    document: rag,
+  },
+  {
+    id: 20,
+    title: "RTI declaration Under Section 4",
+    document: RTI,
   },
 ];
 
