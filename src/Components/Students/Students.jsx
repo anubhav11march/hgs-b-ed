@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { BsList } from "react-icons/bs";
-import sosChildrenVillage from "./../assets/images/sos_logo 3.png";
+
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import SideBar from "../SideBar/SideBar";
 import email from "./../assets/icons/email.png";
@@ -203,12 +203,7 @@ const Students = ({
         <div className="">
             <div>
                 <div className={`${isScrolled && "navbarMobile"}`}>
-                    <img
-                        onClick={handleOverView}
-                        className="w-20 lg:w-48 md:24 home-button hover:shadow-2xl"
-                        src={sosChildrenVillage}
-                        alt=""
-                    />
+                   
                     <div className="menuIconContainer">
                         <div className="menuIcon">
                             <BsList

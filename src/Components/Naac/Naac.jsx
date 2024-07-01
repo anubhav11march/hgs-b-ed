@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Naac.css";
 // import aboutUs from './../assets/images/leadership.JPG'
 import aboutUs from "./../assets/images/Landing photo.jpeg";
-import sosChildrenVillage from "./../assets/images/sos_logo 3.png";
+
 import location from "./../assets/icons/location.png";
 import email from "./../assets/icons/email.png";
 import phone from "./../assets/icons/footer.png";
@@ -193,12 +193,7 @@ const Naac = ({
     return (
         <div>
             <div className={`${isScrolled && "navbarMobile"}`}>
-                <img
-                    onClick={handleOverView}
-                    className="w-20 lg:w-48 md:24 home-button hover:shadow-2xl"
-                    src={sosChildrenVillage}
-                    alt=""
-                />
+               
                 <div className="menuIconContainer">
                     <div className="menuIcon">
                         <BsList

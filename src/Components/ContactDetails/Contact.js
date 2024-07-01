@@ -5,7 +5,7 @@ import email from "./../assets/icons/email.svg";
 import location from "./../assets/icons/location.svg";
 import grade from "./../assets/icons/grade.svg";
 import message from "./../assets/icons/message.svg";
-import sosChildrenVillage from "./../assets/images/sos_logo 3.png";
+
 import { useNavigate } from "react-router-dom";
 import Footer from "../Home/Footer";
 import SideBar from "../SideBar/SideBar";
@@ -42,12 +42,6 @@ const Contact = () => {
   return (
     <div>
       <div className={`${isScrolled && "navbarMobile"}`}>
-        <img
-          onClick={handleOverView}
-          className="w-20 lg:w-48 md:24 home-button hover:shadow-2xl"
-          src={sosChildrenVillage}
-          alt=""
-        />
         <div className="menuIconContainer">
           <div className="menuIcon">
             <BsList

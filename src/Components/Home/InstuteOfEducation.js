@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import sosChildrenVillage from "./../assets/images/sos_logo 3.png";
+
 import studyImage from "./../assets/images/Landing photo.jpeg";
 import contactImage from "./../assets/images/3969587 2.png";
 import contactLine from "./../assets/images/contact-line.png";
@@ -52,12 +52,6 @@ const InstuteOfEducation = () => {
     <div className="overflow-hidden relative" onScroll={handleScroll}>
       <img className="w-full" src={background} alt="" />
       <div className={`mb-0 ${isScrolled && "navbarMobile"}`}>
-        <img
-          onClick={handleHome}
-          className="w-20 lg:w-48 md:24 home-button hover:shadow-2xl"
-          src={sosChildrenVillage}
-          alt=""
-        />
         <div className="menuIconContainer">
           <div className="menuIcon">
             <BsList
