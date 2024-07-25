@@ -12,6 +12,8 @@ import AQAR2020 from "../pdf/ResultsAcademics/AQAR Report 2020 - 2021.pdf";
 import AQAR2021 from "../pdf/ResultsAcademics/AQAR Report 2021-2022.pdf";
 import AQAR2022 from "../pdf/ResultsAcademics/AQAR 2022 -23 (1).pdf";
 import MOU from "../pdf/ResultsAcademics/MOU.PDF";
+import SSS2123 from "../pdf/ResultsAcademics/SSS 21-23.pdf";
+import SSS1719 from "../pdf/ResultsAcademics/SSS 2017-19.pdf";
 import Activity from "../pdf/new/Activity 2024_240109_101610.pdf";
 import AnnualReport from "../pdf/new/Annual ReportPDF_240109_101906.pdf";
 import ActiontakenReport from "../pdf/new/IQAC (action taken report)_240109_101831.pdf";
@@ -39,6 +41,7 @@ import sheet from "../pdf/ncte/16 BALANCE SHEET.jpg";
 import income from "../pdf/ncte/17 INCOME & EXPENDITURE DETAILS.jpeg";
 import receipt from "../pdf/ncte/18 RECEIPT AND PAYMENT ACCOUNT FOR THE FINANCIAL YEAR.pdf";
 import madatory from "../pdf/ncte/19 Mandatory-Disclosure.docx";
+
 export const ResultsAcademicsData = [
   {
     id: 1,
@@ -145,6 +148,17 @@ export const ResultsAcademicsData = [
     title: "RTI declaration Under Section 4",
     document: RTI,
   },
+  {
+    id: 21,
+    title: "Student Satisfaction Survey 21-23",
+    document: SSS2123,
+
+  },
+  {
+    id: 22,
+    title: "Student Satisfaction Survey 17-19",
+    document: SSS1719,
+  }
 ];
 
 export const NcteDocument = [
