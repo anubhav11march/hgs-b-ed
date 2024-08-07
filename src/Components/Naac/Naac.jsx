@@ -284,9 +284,10 @@ const Naac = ({
                                     alt=""
                                 />
                                 <p className="flex forTextHover updated-font-family">
-                                SOS J N Kaul Institute of Education Bhimtal SOS
+                                Hermann Gmeiner Degree College Bhimtal SOS
                                     Complex, Tallital Bhimtal Nainital,
                                     Uttrakhand, India, 263136
+                                    {/* address required */}
                                 </p>
                             </div>
                             <div className="flex items-center justify-center my-4 mr-6">

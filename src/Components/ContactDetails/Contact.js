@@ -155,9 +155,10 @@ const Contact = () => {
                   Address
                 </h1>
                 <p className="text-xl updated-font-family">
-                  SOS J N Kaul Institute of Education Bhimtal <br></br> SOS
+                Hermann Gmeiner Degree College <br></br> SOS
                   Complex, Tallital Bhimtal <br></br>
                   Nainital, Uttrakhand, India, 263136
+                  {/* address req */}
                 </p>
               </div>
               <div className="mb-12">

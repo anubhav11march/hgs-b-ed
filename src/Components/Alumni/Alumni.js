@@ -249,8 +249,9 @@ const Alumni = ({
               <div className="flex justify-center">
                 <img className="h-8 mr-4" src={location} alt="" />
                 <p className="flex forTextHover updated-font-family">
-                  SOS J N Kaul Institute of Education Bhimtal SOS Complex,
+                Hermann Gmeiner Degree College Bhimtal SOS Complex,
                   Tallital Bhimtal Nainital, Uttrakhand, India, 263136
+                  {/* add address  */}
                 </p>
               </div>
               <div className="flex items-center justify-center my-4 mr-6">

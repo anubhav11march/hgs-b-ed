@@ -14,7 +14,7 @@ const AboutInstitution = () => {
             <div>
                 <div className="mt-8 mb-8 w-full">
                     <h1 className="welcome aboutWelcome updated-font-family">
-                        Welcome to SOS J.N Kaul Institute of Education
+                        Welcome to Hermann Gmeiner Degree College
                     </h1>
                     <p className="w-full lg:w-[570px] welcome-line" alt="" />
                 </div>
@@ -65,7 +65,7 @@ const AboutInstitution = () => {
                         />
                         <div className="ml-0 lg:ml-6">
                             <h1 className="about-sos updated-font-family">
-                                About J.N. Kaul Institute of Education
+                                About Hermann Gmeiner Degree College
                             </h1>
                             <p className="sos-para updated-font-family">
                                 SOS J. N. Kaul institute of Education, Bhimtal
