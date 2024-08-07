@@ -8,11 +8,12 @@ import email from "./../assets/icons/email.png";
 import phone from "./../assets/icons/footer.png";
 import "./Leadership.css";
 import Footer from "../Home/Footer";
-
+import degreeImg from "../assets/images/Organogram of Administration of SOS Jnkie (1) (4)_page-0001.jpg"
 import { useNavigate } from "react-router-dom";
 import SideBar from "../SideBar/SideBar";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import { BsList } from "react-icons/bs";
+
 
 const Leadership = ({
   setShowNavbar,
@@ -49,6 +50,7 @@ const Leadership = ({
     setShowNavbar[1](false);
     navigate("/");
   };
+
   const handleLeadership = () => {
     setShowNavbar[1](true);
     setOverview[1]("");
@@ -471,6 +473,8 @@ const Leadership = ({
               body, be full of that idea, and just leave every other idea alone.
               This is the way to success.”
             </p>
+            {/* image added after converting it from the pdf */}
+            <img src = {degreeImg} />
           </div>
         </div>
       </div>
