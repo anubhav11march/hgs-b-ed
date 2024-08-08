@@ -20,13 +20,13 @@ const AboutInstitution = () => {
                 </div>
 
                 <div class="mb-[50px]">
-                    <div class="flex justify-center flexProp flex-col lg:flex-row">
+                    {/* <div class="flex justify-center flexProp flex-col lg:flex-row">
                         <img
                             src={studentTaboutBhimtal}
                             class="about-institution-picture rounded-lg shadow-2xl"
                             alt=""
                         />
-                        <div className="ml-0 lg:ml-6">
+                        {/* <div className="ml-0 lg:ml-6">
                             <h1 className="about-sos updated-font-family">
                                 About SOS
                             </h1>
@@ -52,8 +52,8 @@ const AboutInstitution = () => {
                                 of a Maharaja, around 300 km north of New Delhi,
                                 in the foothills of the Himalayan Mountains.
                             </p>
-                        </div>
-                    </div>
+                        </div> 
+                    </div> */}
                 </div>
 
                 <div class="mb-[50px]">
@@ -68,7 +68,7 @@ const AboutInstitution = () => {
                                 About Hermann Gmeiner Degree College
                             </h1>
                             <p className="sos-para updated-font-family">
-                                SOS J. N. Kaul institute of Education, Bhimtal
+                                Hermann Gmeiner Degree College, Bhimtal
                                 is a Community project of SOS Children’s Village
                                 of India. The Institute came into existence by
                                 the sincere and praiseworthy efforts of
@@ -81,8 +81,8 @@ const AboutInstitution = () => {
                                 B.Ed. College anywhere in the adjoining areas so
                                 as a need to fulfill the requirements of
                                 students who wish to opt for teaching as a
-                                profession & career, J. N. Kaul Institute of
-                                education was opened in 2005.
+                                profession & career, Hermann Gmeiner Degree College
+                                 was opened in 2005.
                             </p>
                         </div>
                     </div>
