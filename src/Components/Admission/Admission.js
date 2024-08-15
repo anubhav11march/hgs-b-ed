@@ -208,7 +208,6 @@ const Admission = ({
               <div className="flex justify-center">
                 <img className="h-8 mr-4" src={location} alt="" />
                 <p className="flex forTextHover updated-font-family">
-                Hermann Gmeiner Degree College
                 Hermann Gmeiner Degree College , Bhimtal SOS Complex, Tallital Bhimtal Nainital, Uttrakhand, India, 263136
                 {/* LOCATION MEI ADDRESS */}
                 </p>
@@ -513,8 +512,7 @@ const Admission = ({
                               NRI Quota- 75000.00
                             </span>{" "}
                           </td>
-                        </tr>
-
+                        </tr>¸
                         <tr className="hover-table">
                           <th className="table-data updated-font-family teacher-paragraph">
                             University Name

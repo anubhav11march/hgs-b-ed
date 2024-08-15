@@ -75,9 +75,7 @@ const AboutInstitution = () => {
                                 Padamshree Shri J. N. Kaul, President SOS
                                 Children’s Village of India in the year 2004. It
                                 is approved by NCTE and is affiliated to Kumaun
-                                University, Nainital. The University has been
-                                awarded grade ‘A’ by the National Assessment and
-                                Accreditation Council (NAAC). Since there was no
+                                University, Nainital.Since there was no
                                 B.Ed. College anywhere in the adjoining areas so
                                 as a need to fulfill the requirements of
                                 students who wish to opt for teaching as a
