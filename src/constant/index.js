@@ -14,6 +14,7 @@ import AQAR2022 from "../pdf/ResultsAcademics/AQAR 2022 -23 (1).pdf";
 import MOU from "../pdf/ResultsAcademics/MOU.PDF";
 import SSS2123 from "../pdf/ResultsAcademics/SSS 21-23.pdf";
 import SSS1719 from "../pdf/ResultsAcademics/SSS 2017-19.pdf";
+import SSS2224 from "../pdf/ResultsAcademics/SSS 2022-24.pdf"
 import Activity from "../pdf/new/Activity 2024_240109_101610.pdf";
 import AnnualReport from "../pdf/new/Annual ReportPDF_240109_101906.pdf";
 import ActiontakenReport from "../pdf/new/IQAC (action taken report)_240109_101831.pdf";
@@ -41,7 +42,7 @@ import sheet from "../pdf/ncte/16 BALANCE SHEET.jpg";
 import income from "../pdf/ncte/17 INCOME & EXPENDITURE DETAILS.jpeg";
 import receipt from "../pdf/ncte/18 RECEIPT AND PAYMENT ACCOUNT FOR THE FINANCIAL YEAR.pdf";
 import madatory from "../pdf/ncte/19 Mandatory-Disclosure.docx";
-
+import recordInterns from "../pdf/new/RECORD INTERNS IN DIFFERENT STATES.pdf"
 export const ResultsAcademicsData = [
   {
     id: 1,
@@ -158,8 +159,19 @@ export const ResultsAcademicsData = [
     id: 22,
     title: "Student Satisfaction Survey 17-19",
     document: SSS1719,
+  },
+  {
+    id: 23,
+    title: "Student Satisfaction Survey 22-24",
+    document: SSS2224,
+  },
+  {
+    id: 24,
+    title: "Record Interns in different states",
+    document: recordInterns,
   }
 ];
+
 
 export const NcteDocument = [
   {
