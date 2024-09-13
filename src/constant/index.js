@@ -49,7 +49,8 @@ import collegeDevelopmentCouncil from "../pdf/NAAC documents/College Development
 import feedbackSamples from "../pdf/NAAC documents/Feedback Samples.pdf"
 import rtiAct from "../pdf/NAAC documents/RTI Act.PDF"
 import SSSSurvey from "../pdf/NAAC documents/Students' Satisfaction Survey and Feedback Reports of other stakeholders.pdf"
-
+import IQAC from "../pdf/NAAC documents/Internal Quality Assurance Cell (IQAC) Five Year Meetings.pdf"
+import IQACA from "../pdf/NAAC documents/IQAC Annual Report (Five Years 2018 -19 to 22 -23).pdf"
 export const ResultsAcademicsData = [
   {
     id: 1,
@@ -207,6 +208,17 @@ export const ResultsAcademicsData = [
     title: "Students' Satisfaction Survey and Feedback Reports of other stakeholders",
     document: SSSSurvey,
   },
+  {
+    id: 31,
+    title: "Internal Quality Assurance Cell (IQAC) Five Year Meetings",
+    document: IQAC,
+  },
+  {
+    id: 32,
+    title: "IQAC Annual Report (Five Years 2018 -19 to 22 -23)",
+    document: IQACA,
+  },
+
 
 ];
 
