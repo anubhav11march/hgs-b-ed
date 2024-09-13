@@ -43,6 +43,13 @@ import income from "../pdf/ncte/17 INCOME & EXPENDITURE DETAILS.jpeg";
 import receipt from "../pdf/ncte/18 RECEIPT AND PAYMENT ACCOUNT FOR THE FINANCIAL YEAR.pdf";
 import madatory from "../pdf/ncte/19 Mandatory-Disclosure.docx";
 import recordInterns from "../pdf/new/RECORD INTERNS IN DIFFERENT STATES.pdf"
+import actionTakenReport1 from "../pdf/NAAC documents/Action Taken Report (1).pdf"
+import bestPractises from "../pdf/NAAC documents/BEST PRACTICES.pdf"
+import collegeDevelopmentCouncil from "../pdf/NAAC documents/College Development Council.PDF"
+import feedbackSamples from "../pdf/NAAC documents/Feedback Samples.pdf"
+import rtiAct from "../pdf/NAAC documents/RTI Act.PDF"
+import SSSSurvey from "../pdf/NAAC documents/Students' Satisfaction Survey and Feedback Reports of other stakeholders.pdf"
+
 export const ResultsAcademicsData = [
   {
     id: 1,
@@ -169,7 +176,38 @@ export const ResultsAcademicsData = [
     id: 24,
     title: "Record Interns in different states",
     document: recordInterns,
-  }
+  },
+  {
+    id: 25,
+    title: "Action taken report",
+    document: actionTakenReport1,
+  },
+  {
+    id: 26,
+    title: "Best practises",
+    document: bestPractises,
+  },
+  {
+    id: 27,
+    title: "College development council",
+    document: collegeDevelopmentCouncil,
+  },
+  {
+    id: 28,
+    title: "Feedback samples",
+    document: feedbackSamples,
+  },
+  {
+    id: 29,
+    title: "RTI act",
+    document: rtiAct,
+  },
+  {
+    id: 30,
+    title: "Students' Satisfaction Survey and Feedback Reports of other stakeholders",
+    document: SSSSurvey,
+  },
+
 ];
 
 

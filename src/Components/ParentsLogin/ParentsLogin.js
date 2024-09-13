@@ -1,6 +1,7 @@
 const  ParentsLogin = () =>{
     return (
-        <h1>hello </h1>
+        // add code here f
+        <h1>Hello </h1>
     )
 }
 export default ParentsLogin;
